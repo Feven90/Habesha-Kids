@@ -1,0 +1,42 @@
+{
+  "ha": {
+      "alphabetAudio": "ha.mp3"
+  },
+  "hu": {
+    "alphabetAudio": "hu.mp3"
+  },
+  "hi": {
+      "alphabetAudio": "hi.mp3"
+  },
+"he": {
+  "alphabetAudio": "he.mp3"
+},
+"h": {
+    "alphabetAudio": "h.mp3"
+},
+"ho": {
+  "alphabetAudio": "ho.mp3"
+},
+"le": {
+"alphabetAudio": "le.mp3"
+},
+"lu": {
+  "alphabetAudio": "lu.mp3"
+},
+"li": {
+  "alphabetAudio": "li.mp3"
+},
+"la": {
+"alphabetAudio": "la.mp3"
+},
+"lei": {
+  "alphabetAudio": "lei.mp3"
+},
+"l": {
+  "alphabetAudio": "l.mp3"
+},
+"lo": {
+"alphabetAudio": "lo.mp3"
+}
+}
+

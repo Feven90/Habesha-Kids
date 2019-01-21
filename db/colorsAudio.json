@@ -1,0 +1,24 @@
+{
+"key": {
+"colorAudio": "key.mp3"
+  },
+"tikur": {
+  "colorAudio": "tikur.mp3"
+},
+ "bicha": {
+  "colorAudio": "bicha.mp3"
+},
+"arenguade": {
+  "colorAudio": "arenguade.mp3"
+},
+"buni": {
+    "colorAudio": "buni.mp3"
+},
+"gracha": {
+  "colorAudio": "gracha.mp3"
+},
+"rose": {
+  "colorAudio": "rose.mp3"
+}
+}
+

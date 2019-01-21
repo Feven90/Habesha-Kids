@@ -1,0 +1,32 @@
+{
+  "andi": {
+  "numberAudio": "andi.mp3"
+    },
+  "hulet": {
+    "numberAudio": "hulet.mp3"
+  },
+   "sost": {
+    "numberAudio": "sost.mp3"
+  },
+  "arat": {
+    "numberAudio": "arat.mp3"
+  },
+  "amist": {
+   "numberAudio": "amist.mp3"
+  },
+  "sidst": {
+    "numberAudio": "sidst.mp3"
+  },
+  "sebat": {
+    "numberAudio": "sebat.mp3"
+  },
+  "simnt": {
+    "numberAudio": "simnt.mp3"
+},
+"zetegn": {
+  "numberAudio": "zetegn.mp3"
+},
+"asir": {
+  "numberAudio": "asir.mp3"
+}
+}
