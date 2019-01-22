@@ -1,18 +1,22 @@
 
 import React from 'react';
 // import PropTypes from 'prop-types';
-import authRequests from '../../../helpers/data/autheRequests';
+// import authRequests from '../../../helpers/data/autheRequests';
 // import google from './images/google.png';
 import './Auth.scss';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import ParentAccountForm from '../Account/ParentAccountForm';
 
 class Auth extends React.Component {
   // static propTypes = {
   //   isAuthenticated: PropTypes.func,
   // }
 
-  authenticateUser = (e) => {
-    e.preventDefault(); // telling it to do only specific thing not the default of click event
-    authRequests.authenticate().then((res) => {
+
+  authenticateUser = (e, email, password) => {
+    e.preventDefault();
+    firebase.auth().signInWithEmailAndPassword(email, password).then((res) => {
       // const uid = res.additionalUserInfo.authenticateUser;
       // const user = res.additionalUserInfo.username;
       // this.props.isAuthenticated(uid);
@@ -23,10 +27,7 @@ class Auth extends React.Component {
   render() {
     return (
         <div className="Auth">
-          <button className="btn btn-danger" onClick={this.authenticateUser}>
-          Sign In
-            {/* <img src={google} className="google" alt="google login button" /> */}
-          </button>
+          <ParentAccountForm authenticateUser={this.authenticateUser}/>
         </div>
     );
   }
