@@ -23,14 +23,12 @@ class Home extends React.Component {
           <div className="card-body text-center">
             <h4 className="card-title"><i className="fas fa-user-friends fa-7x"></i></h4>
             <h6 className="card-subtitle mb-2 text-muted">ቁጥሮች</h6>
-            <p className="card-text">Friend List?</p>
           </div>
         </div>
         <div className="card border-dark" id='colors' onClick={this.changeView}>
           <div className="card-body text-center">
             <h4 className="card-title"><i className="fas fa-sun fa-7x"></i></h4>
             <h6 className="card-subtitle mb-2 text-muted">ቀለማት</h6>
-            <p className="card-text">What is the current weather?</p>
           </div>
         </div>
       </div>
@@ -39,7 +37,6 @@ class Home extends React.Component {
           <div className="card-body text-center">
             <h4 className="card-title"><i className="fas fa-calendar-alt fa-7x"></i></h4>
             <h6 className="card-subtitle mb-2 text-muted">ቃላት</h6>
-            <p className="card-text">Upcoming Events</p>
           </div>
         </div>
       </div>

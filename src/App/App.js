@@ -37,7 +37,6 @@ class App extends React.Component {
   componentDidMount() {
     connection();
     this.authListner();
-    // this.removeListener = 
   } 
   authListner = () => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -81,11 +80,6 @@ class App extends React.Component {
               <Switch>
                 <PrivateRoute path='/' exact component={Home} authed={this.state.authed} />
                 <PrivateRoute path='/home' component={Home} authed={this.state.authed} />
-                {/* <PrivateRoute path='/friends' component={Friends} authed={this.state.authed} />
-                <PrivateRoute path='/articles' component={Articles} authed={this.state.authed} />
-                <PrivateRoute path='/weather' component={Weather} authed={this.state.authed} />
-                <PrivateRoute path='/events' component={Events} authed={this.state.authed} />
-                <PrivateRoute path='/messages' component={Messages} authed={this.state.authed} /> */}
                 <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
               </Switch>
               </div>

@@ -22,9 +22,7 @@ class MyNavbar extends React.Component {
     });
   }
 
-  // defined variable you will see in dom
   render() {
-    // const { isAuthed } = this.props.isAuthed;
     const { isAuthed, logoutClickEvent } = this.props;
     const buildNavbar = () => {
       if (isAuthed) {
@@ -56,11 +54,6 @@ class MyNavbar extends React.Component {
           <NavbarBrand href="/">ሐበሻ ልጆች</NavbarBrand>
           <NavbarToggler onClick={e => this.toggle(e)} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            {/* <Nav className="ml-auto" navbar>
-              <NavItem>
-                { isAuthed ? <NavLink onClick={logoutClickEvent}>Logout</NavLink> : ''}
-              </NavItem>
-            </Nav> */}
             {buildNavbar()}
           </Collapse>
         </Navbar>
