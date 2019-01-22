@@ -10,12 +10,15 @@ class ParentAccountForm extends React.Component {
     e.preventDefault();
     this.props.authenticateUser(e, this.state.email, this.state.password);
   }
-
+  createAccount = (e) => {
+    e.preventDefault();
+    this.props.signUp(e, this.state.email, this.state.password)
+  }
+ 
   change = (e) => {
     this.setState({ [e.target.name]: e.target.value})
   }
   render () {
-    // const { authenticateUser } = this.props;
     return (
       <div className='col'>
       <form>
@@ -28,6 +31,8 @@ class ParentAccountForm extends React.Component {
           <input type="password" name='password' value={this.password} className="form-control" onChange={this.change} id="exampleInputPassword1" placeholder="Password"></input>
         </div>
         <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.login}>Log In</button>
+        <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.createAccount}>Sign Up</button>
+
       </form>
     </div>
     );

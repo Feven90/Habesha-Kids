@@ -23,11 +23,17 @@ class Auth extends React.Component {
       this.props.history.push('/home');
     }).catch(err => console.error('there was an error with auth', err));
   }
+  signUp = (e, email, password) => {
+    e.preventDefault();
+    firebase.auth().createUserWithEmailAndPassword(email, password).then((res) => {
+      this.props.history.push('/home');
+    }).catch(err => console.error('there was an error with auth', err));
+  }
 
   render() {
     return (
         <div className="Auth">
-          <ParentAccountForm authenticateUser={this.authenticateUser}/>
+          <ParentAccountForm authenticateUser={this.authenticateUser} signUp={this.signUp}/>
         </div>
     );
   }
