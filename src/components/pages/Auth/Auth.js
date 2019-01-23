@@ -25,7 +25,7 @@ class Auth extends React.Component {
   }
   signUp = ( email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((res) => {
-      console.log(res);
+      console.log(res.user.uid);
       this.props.history.push('/home');
     }).catch(err => console.error('there was an error with auth', err));
   }
