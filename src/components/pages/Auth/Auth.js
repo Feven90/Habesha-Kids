@@ -6,7 +6,7 @@ import React from 'react';
 import './Auth.scss';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import ParentAccountForm from '../Account/ParentAccountForm';
+import ParentAccountForm from '../ParentAccountForm/ParentAccountForm';
 
 class Auth extends React.Component {
   // static propTypes = {
@@ -23,9 +23,9 @@ class Auth extends React.Component {
       this.props.history.push('/home');
     }).catch(err => console.error('there was an error with auth', err));
   }
-  signUp = (e, email, password) => {
-    e.preventDefault();
+  signUp = ( email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((res) => {
+      console.log(res);
       this.props.history.push('/home');
     }).catch(err => console.error('there was an error with auth', err));
   }
