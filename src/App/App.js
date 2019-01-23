@@ -40,7 +40,6 @@ class App extends React.Component {
   } 
   authListner = () => {
     firebase.auth().onAuthStateChanged((user) => {
-      console.log(user);
       if (user) {
         this.setState({
           authed: true,
@@ -55,16 +54,15 @@ class App extends React.Component {
     });
   }
 
-  componentWillUnmount() {
-    this.removeListener();
-  }
-
   render() {
     const { authed, pendingUser } = this.state;
+  
     const logoutClickEvent = () => {
       authRequests.logoutUser();
       this.setState({ authed: false });
     };
+
+    
 
     if (pendingUser) {
       return null;

@@ -1,20 +1,28 @@
 {
-  "user1": {
-  "name": ["kid1", "kid2"],
-  "email": "habesha_Kids@gmail.com",
-  "password": "pass",
-  "emailVerified": true
-    },
-  "user2": {
-    "name": ["kid3", "kid4"],
-    "email": "fev@gmail.com",
-    "password": "pass",
-    "emailVerified": true
-    },
-   "user3": {
-    "name": ["kid5", "kid6"],
-    "email": "fevjesil@gmail.com",
-    "password": "pass",
-    "emailVerified": false
+      "parents":{
+        "parent1": {
+          "uid": 12343,
+        "name": "John",
+        "email": "habesha_Kids@gmail.com",
+        "emailVerified": true
+          },
+        "parent2": {
+          "uid": 9098,
+          "name": "Jeremi",
+          "email": "fev@gmail.com",
+          "emailVerified": true
+          }
+        },
+      "Kids": {
+        "Kid1": {
+          "name": "Smith",
+          "parentUid": 12343,
+          "kidId": 6546
+        },
+        "Kid2": {
+          "name": "rose",
+          "parentUid": 12343,
+          "kidId": 6546
+        }
+      }
     }
-  }
