@@ -1,10 +1,7 @@
 import React from 'react';
-import firebase from 'firebase/app';
 import 'firebase/auth';
-import autheRequest from '../../../helpers/data/autheRequests';
 
 import './CreateParentAccount.scss';
-import postUser from '../../../helpers/data/parentInformation';
 
 const parentInformation= {
   email: '',
@@ -27,8 +24,6 @@ state = {
   formFieldStringState = (name, e) => {
     e.preventDefault();
     const tempInfo = { ...this.state.newParentInformation };
-    // spread operator, making a copy of state, just for caution if we
-    // modify here we don't want it to be modified in state too.
     tempInfo[name] = e.target.value;
     this.setState({ newParentInformation: tempInfo});
   }
@@ -45,30 +40,16 @@ state = {
   
   createAccount = (e) => {
     e.preventDefault();
-    this.props.signUp( this.state.newParentInformation.email, this.state.newParentInformation.password)
-    // firebase.auth().onAuthStateChanged((user) => {
-  //     if (user) {
-  //   console.log(user.uid);
-  //   const uid = user.uid;
-  //   this.setState({ uid})
-  //     }
-  //   })
-  //    postUser.postRequest(this.state);
-    
+    this.props.signUp( this.state.newParentInformation)
   };
 
   formSubmit = (e) => {
     e.preventDefault();
     const { signUp } = this.props;
     const userInformation = { ...this.state.newParentInformation };
-    // userInformation.uid = autheRequest.getCurrentUid();
-    console.log(userInformation.email);
-    signUp(userInformation.email, userInformation.password);
+    console.log(userInformation.uid);
+    signUp(this.state.newParentInformation);
     this.setState({ newParentInformation:parentInformation })
-  }
-
-  change = (e) => {
-    this.setState({ [e.target.name]: e.target.value})
   }
 
   render () {

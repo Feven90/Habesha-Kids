@@ -1,7 +1,6 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-// import 'firebase-database';
 import {
   BrowserRouter, Route, Redirect, Switch,
 } from 'react-router-dom';
@@ -46,26 +45,6 @@ class App extends React.Component {
           authed: true,
           pendingUser: false,
         });
-
-        // const database = firebase.database();
-        // database.ref('parents/' + user.uid).push({
-        //   // username: user.name,
-        //     email: user.email,
-        //     uid: user.uid
-        //   });
-        
-
-        // const admin = require("firebase-admin");
-        // const db = admin.database();
-        // const ref = db.ref("project/habesha-kids/database");
-        // const postsRef = ref.child("parents");
-
-        //   // let postsRef = firebase.database().ref("parents");
-        //   const newPostRef = postsRef.push();
-        //   newPostRef.set({
-        //     email: user.email,
-        //     uid: user.uid
-        //   });
       } else {
         this.setState({
           authed: false,
@@ -74,26 +53,6 @@ class App extends React.Component {
       }
     });
   }
-
-
-  // if (user != null) {
-  //   let ref = '';
-  // var postsRef = ref.child("parents");
-  // var newPostRef = postsRef.push();
-  // newPostRef.set({
-  //   email: user.email,
-  //   uid: user.uid
-  // });
-
-  // we can also chao90olin the two calls together
-//   postsRef.push().set({
-//     email: user.email,
-//     uid: user.uid
-//   });
-// }
-  // componentWillUnmount() {
-  //   this.removeListener();
-  // }
 
   render() {
     const { authed, pendingUser } = this.state;
