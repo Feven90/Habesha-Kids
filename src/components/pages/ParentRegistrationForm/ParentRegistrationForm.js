@@ -1,7 +1,7 @@
 import React from 'react';
 import 'firebase/auth';
 
-import './CreateParentAccount.scss';
+import './ParentRegistrationForm.scss';
 
 const parentInformation= {
   email: '',
@@ -10,7 +10,7 @@ const parentInformation= {
   uid: ''
 };
 
-class ParentAccountForm extends React.Component {
+class ParentRegistrationForm extends React.Component {
 
 state = {
   newParentInformation: parentInformation,
@@ -79,4 +79,4 @@ state = {
 
 
 
-export default ParentAccountForm;
+export default ParentRegistrationForm;
