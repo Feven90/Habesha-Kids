@@ -7,6 +7,7 @@ import {
 import connection from '../helpers/data/connection';
 import authRequests from '../helpers/data/autheRequests';
 import Home from '../components/pages/Home/Home';
+import ParentProfile from '../components/pages/ParentProfile/ParentProfile'
 import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
 
@@ -17,7 +18,7 @@ import './App.scss';
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === false
     ? (<Component { ...props } />)
-    : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
+    : (<Redirect to={{ pathname: '/profile', state: { from: props.location } }} />));
   return <Route {...rest} render={props => routeChecker(props)} />;
 };
 
@@ -78,6 +79,7 @@ class App extends React.Component {
               <Switch>
                 <PrivateRoute path='/' exact component={Home} authed={this.state.authed} />
                 <PrivateRoute path='/home' component={Home} authed={this.state.authed} />
+                <PrivateRoute path='/profile' component={ParentProfile} authed={this.state.authed} />
                 <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
               </Switch>
               </div>
