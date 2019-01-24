@@ -14,11 +14,6 @@ state = {
   newKidInformation: kidInformation,
 }
 
-  // login = (e) => {
-  //   e.preventDefault();
-  //   this.props.authenticateUser(e, this.state.newParentInformation.email, this.state.newParentInformation.password);
-  // }
-  
   formFieldStringState = (name, e) => {
     e.preventDefault();
     const tempInfo = { ...this.state.newKidInformation };
@@ -32,11 +27,6 @@ state = {
   ageChange = (e) => {
     this.formFieldStringState('age', e);
   }
-  
-  // createAccount = (e) => {
-  //   e.preventDefault();
-  //   this.props.signUp( this.state.newParentInformation)
-  // };
 
   formSubmit = (e) => {
     e.preventDefault();

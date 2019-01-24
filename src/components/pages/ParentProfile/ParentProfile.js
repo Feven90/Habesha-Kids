@@ -22,14 +22,8 @@ class ParentProfile extends React.Component {
 
   SaveChildForm = (newKidInformation) => {
     newKidInformation.uid = autheRequests.getCurrentUid();
-    // console.log(uid);
-    // newKidInformation = newKidInformation.uid;
     kidRequest.postKidRequest(newKidInformation);
   }
-
-  // clickAddChild = () => {
-  //   <KidRegistrationForm />
-  // }
 
   render() {
       const { profile } = this.state;
@@ -42,7 +36,6 @@ class ParentProfile extends React.Component {
     <li>
       <span className="col">{profile.email}</span>
     </li>
-    {/* <button className="btn btn-primary" onClick= {this.clickAddChild}>Add your kid</button> */}
     <KidRegistrationForm SaveChildForm={this.SaveChildForm}/>
     </div>
     );
