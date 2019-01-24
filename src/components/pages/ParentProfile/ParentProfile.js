@@ -4,40 +4,70 @@ import getParentInfo from '../../../helpers/data/parentInformation';
 import autheRequests from '../../../helpers/data/autheRequests';
 import kidRequest from '../../../helpers/data/kidRequest';
 import KidRegistrationForm from '../KidsProfile/KidsRegistrationForm';
+import KidsHome from '../KidsHome/KidsHome';
+import './ParentProfile.scss';
 
 class ParentProfile extends React.Component {
   state = {
     profile: [],
-    kid: [],
-    uid: ''
+    kids: [],
+    // uid: ''
   }
   componentDidMount() {
     const uid = autheRequests.getCurrentUid();
-    console.log(uid);
   getParentInfo.getParentProfile(uid).then((profile) => { 
-    console.log(profile);
     this.setState({profile})
   });
+  kidRequest.getKids(uid).then((kids) => {
+    console.log(kids);
+    this.setState({ kids });
+  });
+  // kidRequest.getKidsProfile(uid);
+}
+
+deleteOneKid = (kidId) => {
+  const uid = autheRequests.getCurrentUid();
+  kidRequest.deleteKid(kidId)
+    .then(() => {
+      kidRequest.getKids(uid)
+        .then((kids) => {
+          this.setState({ kids });
+        });
+    })
+    .catch(err => console.error('error with delte single', err));
 }
 
   SaveChildForm = (newKidInformation) => {
+    const uid= autheRequests.getCurrentUid();
     newKidInformation.uid = autheRequests.getCurrentUid();
-    kidRequest.postKidRequest(newKidInformation);
+    kidRequest.postKidRequest(newKidInformation).then(() => {
+      kidRequest.getKids(uid).then((kids) => {
+        console.log(kids);
+        this.setState({ kids });
+      });
+    })
+    .catch(err => console.error('error with kids post', err));
   }
 
   render() {
       const { profile } = this.state;
 
     return (
-      <div>
-    <li>
-      <span className="col"><h2>Welcome to our page</h2><h2>{profile.name}</h2></span>
-    </li>
-    <li>
-      <span className="col">{profile.email}</span>
-    </li>
-    <KidRegistrationForm SaveChildForm={this.SaveChildForm}/>
-    </div>
+     
+        <div>
+            <span className="col-9"><h2>Welcome {profile.name}</h2></span>
+          {/* <li className="parent-listing">
+            <span className="col">{profile.email}</span>
+          </li> */}
+          <div className="kid-form-and-info">
+            <div className="kids-home">
+              <KidsHome kids={this.state.kids} deleteSingleKid ={this.deleteOneKid}/>
+            </div>
+            <div className="kid-registration-form">
+              <KidRegistrationForm SaveChildForm={this.SaveChildForm}/>
+            </div>
+          </div>
+        </div>
     );
   }
 }

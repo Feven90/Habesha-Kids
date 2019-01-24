@@ -50,13 +50,15 @@ class MyNavbar extends React.Component {
     };
     return (
       <div className="my-navbar">
-         <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">ሐበሻ ልጆች</NavbarBrand>
-          <NavbarToggler onClick={e => this.toggle(e)} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            {buildNavbar()}
-          </Collapse>
-        </Navbar>
+        <div>
+          <Navbar color="dark" dark expand="md">
+            <NavbarBrand href="/">ሐበሻ ልጆች</NavbarBrand>
+            <NavbarToggler onClick={e => this.toggle(e)} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              {buildNavbar()}
+            </Collapse>
+          </Navbar>
+        </div>
       </div>
     );
   }
