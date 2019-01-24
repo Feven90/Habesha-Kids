@@ -20,7 +20,7 @@ class Auth extends React.Component {
       newParentInformation.uid = autheRequests.getCurrentUid();
       const partOfParentInfo = { name: newParentInformation.name,
                         email: newParentInformation.email,
-                        udi: newParentInformation.uid
+                        uid: newParentInformation.uid
                         }
       postUser.postRequest(partOfParentInfo);
       this.props.history.push('/profile');

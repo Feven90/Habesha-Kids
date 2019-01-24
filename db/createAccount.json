@@ -13,13 +13,13 @@
           "emailVerified": true
           }
         },
-      "Kids": {
+      "kids": {
         "Kid1": {
           "name": "Smith",
           "parentUid": 12343,
           "kidId": 6546
         },
-        "Kid2": {
+        "kid2": {
           "name": "rose",
           "parentUid": 12343,
           "kidId": 6546
