@@ -39,7 +39,7 @@ state = {
   render () {
     const { newKidInformation } = this.state;
     return (
-      <div className='col'>
+      <div className=''>
       <h3>Register Kids Here</h3>
       <form className="kids-form"> 
       <div className="form-group">

@@ -1,5 +1,6 @@
 import React from 'react';
 import './KidItem.scss';
+import { Link } from 'react-router-dom';
 // import tutorialShape from '../../helpers/propz/tutorialShape';
 import authRequests from '../../../helpers/data/autheRequests';
 
@@ -21,21 +22,23 @@ class KidItem extends React.Component {
     const makeButtons = () => {
       if (kid.uid === uid) {
         return (
-          <div>
+          
             <span className="col">
               <button className="btn btn-danger" onClick={this.deleteKidEvent}> Delete</button>
             </span>
-          </div>
+          
         );
       }
       return <span className="col space"></span>;
     };
     return (
-      <li className="kids-item kids-listing">
-        <span className="col-2 kids-info" >{kid.name}</span>
-        <span className="col-7 kids-info">{kid.age}</span>
-        <span>{makeButtons()}</span>
-      </li>
+      <div>
+        <li className="kids-item kids-listing">
+          <Link to={`/home/${kid.id}`} className="kid-link"><span className="col-2 kids-info" >{kid.name}</span></Link>
+          {/* <span className="col-7 kids-info">{kid.age}</span> */}
+          <span>{makeButtons()}</span>
+        </li>
+      </div>
     );
   }
 }

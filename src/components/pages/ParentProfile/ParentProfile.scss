@@ -4,8 +4,18 @@
 .kid-form-and-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  margin-left: 300px;
+  // margin: 0 auto;
+  // width: 300px;
+  // justify-content: flex-end;
 }
 // .kid-registration-form {
 //   box-align: end;
 // }
+// .wrap-info-kids {
+//   margin: 0 auto;
+//   width: 300px;
+// }
+.kids-home {
+  padding-right: 60px; 
+}

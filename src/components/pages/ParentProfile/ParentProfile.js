@@ -53,12 +53,13 @@ deleteOneKid = (kidId) => {
       const { profile } = this.state;
 
     return (
-     
+      <div>
         <div>
-            <span className="col-9"><h2>Welcome {profile.name}</h2></span>
+            <span className=""><h2>Welcome {profile.name}</h2></span>
           {/* <li className="parent-listing">
             <span className="col">{profile.email}</span>
           </li> */}
+        </div>
           <div className="kid-form-and-info">
             <div className="kids-home">
               <KidsHome kids={this.state.kids} deleteSingleKid ={this.deleteOneKid}/>
@@ -67,7 +68,7 @@ deleteOneKid = (kidId) => {
               <KidRegistrationForm SaveChildForm={this.SaveChildForm}/>
             </div>
           </div>
-        </div>
+          </div>
     );
   }
 }
