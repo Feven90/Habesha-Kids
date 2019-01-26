@@ -8,6 +8,10 @@ class Home extends React.Component {
     this.props.history.push(`/${view}`);
   }
 
+  clickProfile = () => {
+    this.props.history.push(`/profile`);
+  }
+
   render() {
     return (
       <div className='Home mx-auto'>
@@ -16,7 +20,6 @@ class Home extends React.Component {
           <div className="card-body text-center">
             <h4 className="card-title"><i className="fas fa-comments fa-7x"></i></h4>
             <h6 className="card-subtitle mb-2 text-muted">ፊደላት</h6>
-            {/* <p className="card-text">Newer better AOL</p> */}
           </div>
         </div>
         <div className="card border-dark" id='numbers' onClick={this.changeView}>
@@ -40,6 +43,7 @@ class Home extends React.Component {
           </div>
         </div>
       </div>
+      <button class="btn btn-primary" onClick={this.clickProfile}>Profile</button>
     </div>
     );
   }

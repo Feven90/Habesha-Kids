@@ -27,21 +27,21 @@ class MyNavbar extends React.Component {
     const buildNavbar = () => {
       if (isAuthed) {
         return (
-        <Nav className='ml-auto' navbar>
+        <Nav className='ml-auto' > {/* color='dark' dark navbar */}
         <NavItem>
-          <NavLink tag={RRNavLink} to='/alphabets'>ፊደላት</NavLink>
+          <NavLink tag={RRNavLink} to='/alphabets' className="navigation">ፊደላት</NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/numbers'>ቁጥሮች</NavLink>
+          <NavLink tag={RRNavLink} to='/numbers' className="navigation">ቁጥሮች</NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/colors'>ቀለማት</NavLink>
+          <NavLink tag={RRNavLink} to='/colors' className="navigation">ቀለማት</NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/words'>ቃላት</NavLink>
+          <NavLink tag={RRNavLink} to='/words' className="navigation">ቃላት</NavLink>
           </NavItem>
           <NavItem>
-          <NavLink onClick={logoutClickEvent}>Logout</NavLink>
+          <NavLink onClick={logoutClickEvent} className="navigation">Logout</NavLink>
           </NavItem>
         </Nav>
         );
@@ -51,8 +51,8 @@ class MyNavbar extends React.Component {
     return (
       <div className="my-navbar">
         <div>
-          <Navbar color="dark" dark expand="md">
-            <NavbarBrand href="/">ሐበሻ ልጆች</NavbarBrand>
+          <Navbar expand="md"> {/*dark*/}
+            <NavbarBrand href="/home" className="navigation">ሐበሻ ልጆች</NavbarBrand>
             <NavbarToggler onClick={e => this.toggle(e)} />
             <Collapse isOpen={this.state.isOpen} navbar>
               {buildNavbar()}

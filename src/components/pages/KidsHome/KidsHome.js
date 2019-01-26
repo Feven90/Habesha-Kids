@@ -22,7 +22,7 @@ class KidsHome extends React.Component {
       />
     ));
     return (
-      <div className="kids col">
+      <div className="kids">
         <ul>{kidItemComponents}</ul>
       </div>
     );

@@ -1,20 +1,30 @@
 {
   "ha": {
+    "name":"ሀ",
       "alphabetAudio": "ha.mp3"
   },
   "hu": {
+    "name":"ሁ",
     "alphabetAudio": "hu.mp3"
   },
   "hi": {
-      "alphabetAudio": "hi.mp3"
+    "name":"ሂ",
+    "alphabetAudio": "hi.mp3"
   },
-"he": {
+"hae": {
+  "name":"ሃ",
   "alphabetAudio": "he.mp3"
 },
+"he": {
+  "name":"ሄ",
+  "alphabetAudio": "h.mp3"
+},
 "h": {
-    "alphabetAudio": "h.mp3"
+  "name":"ህ",
+  "alphabetAudio": "ho.mp3"
 },
 "ho": {
+  "name":"ሆ",
   "alphabetAudio": "ho.mp3"
 },
 "le": {
