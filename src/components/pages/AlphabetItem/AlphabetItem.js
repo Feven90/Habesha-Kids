@@ -7,14 +7,21 @@ class AlphabetItem extends React.Component {
   //   tutorial: tutorialShape,
   // }
 
+  clickAlphabet = () => {
+    const x=document.getElementById('audio');
+    x.play();
+    console.log("click");
+  }
+
   render() {
     const { alphabet } = this.props;
-    const sound = require(`../../../assets/sounds/letters/${alphabet.alphabetAudio}`)
+    const sound = require(`../../../assets/sounds/letters/${alphabet.alphabetAudio}`);
+    console.log(sound);
 
     return (
         <div className="alphabet-item">
-          {alphabet.name}
-          <audio>
+          <p onClick={this.clickAlphabet}>{alphabet.name}</p>
+          <audio id="audio">
           <source src={sound}/>
       </audio>
         </div>
