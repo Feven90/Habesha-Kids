@@ -11,7 +11,6 @@ class ParentProfile extends React.Component {
   state = {
     profile: [],
     kids: [],
-    // uid: ''
   }
   componentDidMount() {
     const uid = autheRequests.getCurrentUid();
@@ -22,7 +21,6 @@ class ParentProfile extends React.Component {
     console.log(kids);
     this.setState({ kids });
   });
-  // kidRequest.getKidsProfile(uid);
 }
 
 deleteOneKid = (kidId) => {
@@ -56,9 +54,6 @@ deleteOneKid = (kidId) => {
       <div>
         <div className="profile-welcome">
             <span className="profile-welcome"><h2>Welcome {profile.name}</h2></span>
-          {/* <li className="parent-listing">
-            <span className="col">{profile.email}</span>
-          </li> */}
         </div>
           <div className="kid-form-and-info">
             <div className="kids-home">
