@@ -1,0 +1,258 @@
+{
+  "ha": {
+    "name":"ሀ",
+      "alphabetAudio": "ha.m4a",
+      "order": 1
+  },
+  "hu": {
+    "name":"ሁ",
+    "alphabetAudio": "hu.mp3",
+    "order": 2
+  },
+  "hi": {
+    "name":"ሂ",
+    "alphabetAudio": "hi.mp3",
+    "order": 3
+  },
+"hae": {
+  "name":"ሃ",
+  "alphabetAudio": "hae.mp3",
+  "order": 4
+},
+"he": {
+  "name":"ሄ",
+  "alphabetAudio": "he.mp3",
+  "order": 5
+},
+"h": {
+  "name":"ህ",
+  "alphabetAudio": "h.mp3",
+  "order": 6
+},
+"ho": {
+  "name":"ሆ",
+  "alphabetAudio": "ho.mp3",
+  "order": 7
+},
+"le": {
+  "name":"ለ",
+  "alphabetAudio": "le.mp3",
+  "order": 8
+},
+"lu": {
+  "name":"ሉ",
+  "alphabetAudio": "lu.mp3",
+  "order": 9
+},
+"li": {
+  "name":"ሊ",
+  "alphabetAudio": "li.mp3",
+  "order": 10
+},
+"la": {
+  "name":"ላ",
+  "alphabetAudio": "la.mp3",
+  "order": 11
+},
+"lei": {
+  "name":"ሌ",
+  "alphabetAudio": "lei.mp3",
+  "order": 12
+},
+"l": {
+  "name":"ል",
+  "alphabetAudio": "l.mp3",
+  "order": 13
+},
+"lo": {
+  "name":"ሎ",
+  "alphabetAudio": "lo.mp3",
+  "order": 14
+},
+"Ha": {
+  "name":"ሐ",
+  "alphabetAudio": "ha.mp3",
+  "order": 15
+},
+"Hu": {
+  "name":"ሑ",
+  "alphabetAudio": "hu.mp3",
+  "order": 16
+},
+"Hi": {
+  "name":"ሒ",
+  "alphabetAudio": "hi.mp3",
+  "order": 17
+},
+"Hae": {
+  "name": "ሓ",
+  "alphabetAudio": "hae.mp3",
+  "order": 18
+}, 
+"He": {
+  "name": "ሔ",
+  "alphabetAudio": "he.mp3",
+  "order": 19
+}, 
+"H": {
+  "name": "ሕ",
+  "alphabetAudio": "h.mp3",
+  "order": 20
+},
+"Ho": {
+  "name": "ሖ",
+  "alphabetAudio": "ho.mp3",
+  "order": 21
+}
+,
+"me": {
+  "name": "መ",
+  "alphabetAudio": "me.mp3",
+  "order": 22
+},
+"mu": {
+  "name": "ሙ",
+  "alphabetAudio": "mu.mp3",
+  "order": 23
+},
+"mi": {
+  "name": "ሚ",
+  "alphabetAudio": "mi.mp3",
+  "order": 24
+},
+"ma": {
+  "name": "ማ",
+  "alphabetAudio": "ma.mp3",
+  "order": 25
+},
+"mei": {
+  "name": "ሜ",
+  "alphabet": "mei.mp3",
+  "order": 26
+}, 
+"m": {
+  "name":"ም",
+  "alphabet": "m.mp3",
+  "order": 27
+},
+"mo": {
+  "name":"ሞ",
+  "alphabet": "mo.mp3",
+  "order": 28
+},
+"se": {
+  "name":"ሠ",
+  "alphabet": "se.mp3",
+  "order": 29
+}, 
+"su": {
+  "name":"ሡ",
+  "alphabet": "su.mp3",
+  "order": 30
+},
+"si": {
+  "name":"ሢ",
+  "alphabet": "si.mp3",
+  "order": 31
+},
+"sa": {
+  "name":"ሣ",
+  "alphabet": "sa.mp3",
+  "order": 32
+},
+"sei": {
+  "name":"ሤ",
+  "alphabet": "sei.mp3",
+  "order": 33
+},
+"s": {
+  "name":"ሥ",
+  "alphabet": "s.mp3",
+  "order": 34
+},
+"so": {
+  "name":"ሦ",
+  "alphabet": "so.mp3",
+  "order": 35
+},
+"re": {
+  "name":"ረ",
+  "alphabet": "re.mp3",
+  "order": 36
+},
+"ru": {
+  "name":"ሩ",
+  "alphabet": "ru.mp3",
+  "order": 37
+},
+"ri": {
+  "name":"ሪ",
+  "alphabet": "ri.mp3",
+  "order": 38
+},
+"ra": {
+  "name":"ራ",
+  "alphabet": "ra.mp3",
+  "order": 39
+},
+"rei": {
+  "name":"ሬ",
+  "alphabet": "rei.mp3",
+  "order": 40
+},
+"r": {
+  "name":"ር",
+  "alphabet": "r.mp3",
+  "order": 41
+},
+"ro": {
+  "name":"ሮ",
+  "alphabet": "ro.mp3",
+  "order": 42
+},
+"Se": {
+  "name":"ሰ",
+  "alphabet": "se.mp3",
+  "order": 43
+},
+"Su": {
+  "name":"ሱ",
+  "alphabet": "su.mp3",
+  "order": 44
+},
+"Si": {
+  "name":"ሲ",
+  "alphabet": "si.mp3",
+  "order": 45
+},
+"Sa": {
+  "name":"ሳ",
+  "alphabet": "sa.mp3",
+  "order": 46
+},
+"Sei": {
+  "name":"ሴ",
+  "alphabet": "sei.mp3",
+  "order": 47
+},
+"S": {
+  "name":"ስ",
+  "alphabet": "s.mp3",
+  "order": 48
+},
+"So": {
+  "name":"ሶ",
+  "alphabet": "so.mp3",
+  "order": 49
+},
+"she": {
+  "name":"ሸ",
+  "alphabet": "she.mp3",
+  "order": 50
+},
+"shu": {
+  "name":"ሹ",
+  "alphabet": "shu.mp3",
+  "order": 51
+}
+}

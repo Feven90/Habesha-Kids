@@ -54,8 +54,8 @@ deleteOneKid = (kidId) => {
 
     return (
       <div>
-        <div>
-            <span className=""><h2>Welcome {profile.name}</h2></span>
+        <div className="profile-welcome">
+            <span className="profile-welcome"><h2>Welcome {profile.name}</h2></span>
           {/* <li className="parent-listing">
             <span className="col">{profile.email}</span>
           </li> */}

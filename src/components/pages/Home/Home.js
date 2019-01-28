@@ -15,6 +15,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className='Home mx-auto'>
+      <button class="btn btn-primary profile-button" onClick={this.clickProfile}>Profile</button>
       <div className="card-deck mt-5">
         <div className="card border-dark" id="alphabets" onClick={this.changeView}>
           <div className="card-body text-center">
@@ -43,7 +44,6 @@ class Home extends React.Component {
           </div>
         </div>
       </div>
-      <button class="btn btn-primary" onClick={this.clickProfile}>Profile</button>
     </div>
     );
   }
