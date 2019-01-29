@@ -10,7 +10,6 @@ class NumberItem extends React.Component {
   render() {
     const { number } = this.props;
     const sound = require(`../../../assets/sounds/numbers/${number.numberAudio}`);
-    // console.log(sound);
   
     return (
         <div className="number-item">
