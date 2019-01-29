@@ -1,7 +1,22 @@
 {
   "ha": {
     "name":"ሀ",
-      "alphabetAudio": "ha.m4a",
+      "alphabetAudio": "ha.mp3",
       "order": 1
-  }
+  },
+  "hu": {
+    "name":"ሁ",
+    "alphabetAudio": "hu.m4a",
+    "order": 2
+  },
+  "hi": {
+    "name":"ሂ",
+    "alphabetAudio": "hi.m4a",
+    "order": 3
+  },
+"he": {
+  "name":"ሄ",
+  "alphabetAudio": "he.m4a",
+  "order": 5
+}
 }
