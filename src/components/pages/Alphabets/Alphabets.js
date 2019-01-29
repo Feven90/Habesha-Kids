@@ -8,14 +8,29 @@ import alphabetRequest from '../../../helpers/data/alphabetsRequest';
 class Alphabets extends React.Component {
   state = {
     alphabets: [],
+    perPageAlphabets: [],
+    page: 0
+    // pageLength:
   }
 componentDidMount() {
 alphabetRequest.getAlphabets().then((alphabets) => {
   this.setState({ alphabets });
+  console.log(alphabets);
 })
 }
+ 
+clickNextPage = () => {
+  this.setState({ page: page + 1});
+  
+  if( this.page === 1) {
+    for (let i=0; i<=2; i++){
+      this.setState({ perPageAlphabets })
+    }
+  }
+  // this.setState({ perPageAlphabets })
+}  
 
-  render() {
+render() {
     const {alphabets } = this.state;
     const alphabetItemComponents = alphabets.map(alphabet => (
       <AlphabetItem
@@ -29,6 +44,7 @@ alphabetRequest.getAlphabets().then((alphabets) => {
           <h2>
           {alphabetItemComponents}
           </h2>
+          <button class="btn btn-primary" onClick={this.clickNextPage}>next</button>
         </div>
       </div>
     );

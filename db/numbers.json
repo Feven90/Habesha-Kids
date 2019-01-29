@@ -1,32 +1,42 @@
 {
-  "andi": {
+  "one": {
+  "number": 1,
   "numberAudio": "andi.mp3"
     },
-  "hulet": {
+  "two": {
+    "number": 2,
     "numberAudio": "hulet.mp3"
   },
-   "sost": {
+   "three": {
+     "number": 3,
     "numberAudio": "sost.mp3"
   },
-  "arat": {
+  "four": {
+    "number": 4,
     "numberAudio": "arat.mp3"
   },
-  "amist": {
+  "five": {
+    "number": 5,
    "numberAudio": "amist.mp3"
   },
-  "sidst": {
+  "six": {
+    "number": 6,
     "numberAudio": "sidst.mp3"
   },
-  "sebat": {
+  "seven": {
+    "number": 7,
     "numberAudio": "sebat.mp3"
   },
-  "simnt": {
+  "eight": {
+    "number": 8,
     "numberAudio": "simnt.mp3"
 },
-"zetegn": {
+"nine": {
+  "number": 9,
   "numberAudio": "zetegn.mp3"
 },
-"asir": {
+"ten": {
+  "number": 10,
   "numberAudio": "asir.mp3"
 }
 }
