@@ -20,7 +20,6 @@ clickAlphabet = () => {
   render() {
     const { alphabet } = this.props;
     const sound = require(`../../../assets/sounds/letters/${alphabet.alphabetAudio}`);
-    console.log(sound);
   
     return (
         <div className="alphabet-item">

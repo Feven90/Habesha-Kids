@@ -18,17 +18,6 @@ alphabetRequest.getAlphabets().then((alphabets) => {
   console.log(alphabets);
 })
 }
- 
-clickNextPage = () => {
-  this.setState({ page: page + 1});
-  
-  if( this.page === 1) {
-    for (let i=0; i<=2; i++){
-      this.setState({ perPageAlphabets })
-    }
-  }
-  // this.setState({ perPageAlphabets })
-}  
 
 render() {
     const {alphabets } = this.state;
@@ -44,8 +33,8 @@ render() {
           <h2>
           {alphabetItemComponents}
           </h2>
-          <button class="btn btn-primary" onClick={this.clickNextPage}>next</button>
         </div>
+        <button class="btn btn-primary">next</button>
       </div>
     );
   }
