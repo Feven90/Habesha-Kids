@@ -9,19 +9,44 @@ class Alphabets extends React.Component {
   state = {
     alphabets: [],
     perPageAlphabets: [],
-    page: 0
-    // pageLength:
+    page: 1
   }
 componentDidMount() {
 alphabetRequest.getAlphabets().then((alphabets) => {
   this.setState({ alphabets });
-  console.log(alphabets);
-})
+});
+  this.firstPageAlphabets();
+}
+
+firstPageAlphabets = () => {
+  alphabetRequest.getAlphabets().then((alphabets) => {
+    let perPageAlphabets = alphabets.slice(0,28);
+    this.setState({ perPageAlphabets });
+});
+}
+
+clickNextPage = () => {
+  if(this.state.page === 1) {
+      const { alphabets } = this.state;
+        let perPageAlphabets = alphabets.slice(28,35);
+        this.setState({ perPageAlphabets })
+    this.setState({ page:2 });
+    }
+    if (this.state.page === 2) {
+      alphabetRequest.getAlphabets().then((alphabet) => {
+          let perPageAlphabets = alphabet.slice(35,51);
+          this.setState({ perPageAlphabets })
+      });
+    this.setState({ page:3 });
+    }
+    if(this.state.page === 3) {
+      this.firstPageAlphabets();
+    }
 }
 
 render() {
-    const {alphabets } = this.state;
-    const alphabetItemComponents = alphabets.map(alphabet => (
+    const { perPageAlphabets } = this.state;
+    const alphabetItemComponents = perPageAlphabets.map(alphabet => (
       <AlphabetItem
         alphabet={alphabet}
         key={alphabet.id}
@@ -34,7 +59,7 @@ render() {
           {alphabetItemComponents}
           </h2>
         </div>
-        <button class="btn btn-primary">next</button>
+        <button className="btn btn-primary" onClick={this.clickNextPage}>next</button>
       </div>
     );
   }

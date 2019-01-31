@@ -1,7 +1,7 @@
 import React from 'react';
 // import firebase from 'firebase/app';
 import 'firebase/auth';
-import './Alphabets.scss';
+import './Numbers.scss';
 import NumberItem from '../NumberItem/NumberItem';
 import numbersRequest from '../../../helpers/data/numbersRequest';
 
