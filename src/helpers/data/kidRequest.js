@@ -25,9 +25,14 @@ const postKidRequest = kid => axios.post(`${firebaseUrl}/kids.json`, kid);
 
 const deleteKid = kidId => axios.delete(`${firebaseUrl}/kids/${kidId}.json`);
 
+const getSingleKid = kidId => axios.get(`${firebaseUrl}/kids/${kidId}.json`);
+
+const putRequest = (kidId, kid) => axios.put(`${firebaseUrl}/kids/${kidId}.json`, kid);
 
 export default {
   postKidRequest,
   getKids,
-  deleteKid
+  deleteKid,
+  putRequest,
+  getSingleKid
 }

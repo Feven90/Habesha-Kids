@@ -13,12 +13,13 @@ class KidsHome extends React.Component {
   // }
 
   render() {
-    const { kids, deleteSingleKid } = this.props;
+    const { kids, deleteSingleKid , passKidToEdit } = this.props;
     const kidItemComponents = kids.map(kid => (
       <KidItem
         kid={kid}
         key={kid.id}
         deleteSingleKid={deleteSingleKid}
+        passKidToEdit={passKidToEdit}
       />
     ));
     return (

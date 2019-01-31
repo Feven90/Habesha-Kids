@@ -3,14 +3,15 @@ import React from 'react';
 import 'firebase/auth';
 import './Numbers.scss';
 import NumberItem from '../NumberItem/NumberItem';
-import numbersRequest from '../../../helpers/data/numbersRequest';
+import numberRequest from '../../../helpers/data/numbersRequest';
 
 class Numbers extends React.Component {
   state = {
     numbers: [],
   }
 componentDidMount() {
-numbersRequest.getNumbers().then((numbers) => {
+numberRequest.getNumbers().then((numbers) => {
+  console.log(numbers);
   this.setState({ numbers });
 })
 }

@@ -2,10 +2,11 @@ import React from 'react';
 import 'firebase/auth';
 
 import './KidsRegistrationForm.scss';
+import kidRequest from '../../../helpers/data/kidRequest';
 
 const kidInformation= {
   name: '',
-  age: ''
+  age: '',
 };
 
 class KidRegistrationForm extends React.Component {
@@ -36,19 +37,36 @@ state = {
     this.setState({ newKidInformation:kidInformation })
   }
 
+componentDidUpdate(prevProps) {
+  const { isEditing, editId } = this.props;
+  if (prevProps !== this.props && isEditing) {
+    kidRequest.getSingleKid(editId)
+      .then((kid) => {
+        this.setState({ newKidInformation: kid.data });
+      })
+      .catch(err => console.error('error with getSingleListing', err));
+  }
+}
   render () {
     const { newKidInformation } = this.state;
+    const { isEditing } = this.props;
+    const title = () => {
+      if (isEditing) {
+        return <h2>Edit Kid:</h2>;
+      }
+      return <h2>Add New Kid:</h2>;
+    };
     return (
       <div className=''>
-      <h3>Register Kids Here</h3>
+      {title()}
       <form className="kids-form"> 
       <div className="form-group">
           <label>Name</label>
-          <input type="text" name='kidName' value={newKidInformation.name} className="form-control" onChange={this.nameChange} id="kid-name" placeholder="Feven"></input>
+          <input type="text" name='kidName' value={newKidInformation.name} className="form-control kid-name" onChange={this.nameChange} id="kid-name" placeholder="Feven"></input>
         </div>
         <div className="form-group">
           <label>Age</label>
-          <input type="number" name='age' value={newKidInformation.age} className="form-control" onChange={this.ageChange} id="kid-age" aria-describedby="ageHelp" placeholder="2"></input>
+          <input type="number" name='age' value={newKidInformation.age} className="form-control kid-age" onChange={this.ageChange} id="kid-age" aria-describedby="ageHelp" placeholder="2"></input>
         </div>
         <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.formSubmit}>Save</button>
       </form>
@@ -56,7 +74,5 @@ state = {
     );
   }
 }
-
-
 
 export default KidRegistrationForm;

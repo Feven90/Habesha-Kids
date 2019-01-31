@@ -7,14 +7,21 @@ class NumberItem extends React.Component {
   //   tutorial: tutorialShape,
   // }
 
+  clickNumber = () => {
+    const x=document.getElementById(this.props.number.id);
+    console.log(x);
+    x.play();
+    console.log("click");
+  }
+
   render() {
     const { number } = this.props;
     const sound = require(`../../../assets/sounds/numbers/${number.numberAudio}`);
   
     return (
         <div className="number-item">
-          <audio id="audio">
-            {number.name}
+            <p onClick={this.clickNumber}>{number.number}</p>
+            <audio id={number.id}>
             <source src={sound}/>
           </audio>
         </div>

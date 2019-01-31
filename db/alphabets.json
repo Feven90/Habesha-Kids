@@ -401,48 +401,128 @@
   "order": 80
 },
 "ta": {
-  "name":"ቮ",
+  "name":"ታ",
   "alphabetAudio": "ha.mp3",
   "order": 81
 },
 "tei": {
-  "name":"ቮ",
+  "name":"ቴ",
   "alphabetAudio": "ha.mp3",
   "order": 82
 },
 "t": {
-  "name":"ቮ",
+  "name":"ት",
   "alphabetAudio": "ha.mp3",
   "order": 83
 },
 "to": {
-  "name":"ቮ",
+  "name":"ቶ",
   "alphabetAudio": "ha.mp3",
   "order": 84
 },
-"vo": {
-  "name":"ቮ",
+"che": {
+  "name":"ቸ",
   "alphabetAudio": "ha.mp3",
   "order": 85
 },
-"vo": {
-  "name":"ቮ",
+"chu": {
+  "name":"ቹ",
   "alphabetAudio": "ha.mp3",
   "order": 86
 },
-"vo": {
-  "name":"ቮ",
+"chi": {
+  "name":"ቺ",
   "alphabetAudio": "ha.mp3",
   "order": 87
 },
-"vo": {
-  "name":"ቮ",
+"cha": {
+  "name":"ቻ",
   "alphabetAudio": "ha.mp3",
   "order": 88
 },
-"vo": {
-  "name":"ቮ",
+"chei": {
+  "name":"ቼ",
   "alphabetAudio": "ha.mp3",
   "order": 89
 },
+"ch": {
+  "name":"ች",
+  "alphabetAudio": "ha.mp3",
+  "order": 90
+},
+"cho": {
+  "name":"ቾ",
+  "alphabetAudio": "ha.mp3",
+  "order": 91
+},
+"HA": {
+  "name":"ኀ",
+  "alphabetAudio": "ha.mp3",
+  "order": 92
+},
+"HU": {
+  "name":"ኁ",
+  "alphabetAudio": "ha.mp3",
+  "order": 93
+},
+"HI": {
+  "name":"ኂ",
+  "alphabetAudio": "ha.mp3",
+  "order": 94
+},
+"HAi": {
+  "name":"ኃ",
+  "alphabetAudio": "ha.mp3",
+  "order": 95
+},
+"HE": {
+  "name":"ኄ",
+  "alphabetAudio": "ha.mp3",
+  "order": 96
+},
+"HEI": {
+  "name":"ኅ",
+  "alphabetAudio": "ha.mp3",
+  "order": 97
+},
+"HO": {
+  "name":"ኆ",
+  "alphabetAudio": "ha.mp3",
+  "order": 98
+},
+"ne": {
+  "name":"ነ",
+  "alphabetAudio": "ha.mp3",
+  "order": 99
+},
+"nu": {
+  "name":"ኑ",
+  "alphabetAudio": "ha.mp3",
+  "order": 100
+},
+"ni": {
+  "name":"ኒ",
+  "alphabetAudio": "ha.mp3",
+  "order": 101
+},
+"na": {
+  "name":"ና",
+  "alphabetAudio": "ha.mp3",
+  "order": 102
+},
+"nei": {
+  "name":"ኔ",
+  "alphabetAudio": "ha.mp3",
+  "order": 103
+},
+"n": {
+  "name":"ን",
+  "alphabetAudio": "ha.mp3",
+  "order": 104
+},
+"no": {
+  "name":"ኖ",
+  "alphabetAudio": "ha.mp3",
+  "order": 105
+}
 }
