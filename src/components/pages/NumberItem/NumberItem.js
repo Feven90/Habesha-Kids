@@ -1,5 +1,5 @@
 import React from 'react';
-import './AlphabetItem.scss';
+import './NumberItem.scss';
 // import tutorialShape from '../../helpers/propz/tutorialShape';
 
 class NumberItem extends React.Component {

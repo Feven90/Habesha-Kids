@@ -3,22 +3,22 @@ import apiKeys from '../apiKeys';
 
 
 const firebaseUrl = apiKeys.firebaseConfig.databaseURL;
-const getAlphabets = () => new Promise((resolve, reject) => {
+const getNumbers = () => new Promise((resolve, reject) => {
   axios
-    .get(`${firebaseUrl}/alphabets.json`)
+    .get(`${firebaseUrl}/numbers.json`)
     .then((res) => {
-      let alphabets = [];
+      let numbers = [];
       if (res.data !== null) {
         Object.keys(res.data).forEach((key) => {
           res.data[key].id = key;
-          alphabets.push(res.data[key]);
-          alphabets.sort(function(a, b){return a.order - b.order});
+          numbers.push(res.data[key]);
+          numbers.sort(function(a, b){return a.order - b.order});
           // console.log(alphabets);
 
         });
       }
       // const currentUser = parents.find(x => x.currentUser);
-      resolve(alphabets);
+      resolve(numbers);
     })
     .catch(err => reject(err));
 });
@@ -30,6 +30,6 @@ const getAlphabets = () => new Promise((resolve, reject) => {
 
 export default {
   // postKidRequest,
-  getAlphabets,
+  getNumbers,
   // deleteKid
 }
