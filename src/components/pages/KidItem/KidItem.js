@@ -14,6 +14,11 @@ class KidItem extends React.Component {
     const { deleteSingleKid, kid } = this.props;
     deleteSingleKid(kid.id);
   }
+  editKidEvent = (e) => {
+    e.preventDefault();
+    const { passKidToEdit, kid } = this.props;
+    passKidToEdit(kid.id);
+  }
 
   render() {
     const { kid } = this.props;
@@ -22,11 +27,14 @@ class KidItem extends React.Component {
     const makeButtons = () => {
       if (kid.uid === uid) {
         return (
-          
+          <div>
+          <span className="col">
+              <button className="btn btn-danger" onClick={this.editKidEvent}> Edit</button>
+            </span>
             <span className="col">
               <button className="btn btn-danger" onClick={this.deleteKidEvent}> Delete</button>
             </span>
-          
+            </div>
         );
       }
       return <span className="col space"></span>;

@@ -11,6 +11,8 @@ class ParentProfile extends React.Component {
   state = {
     profile: [],
     kids: [],
+    isEditing: false,
+    editId: '-1',
   }
   componentDidMount() {
     const uid = autheRequests.getCurrentUid();
@@ -35,8 +37,20 @@ deleteOneKid = (kidId) => {
     .catch(err => console.error('error with delte single', err));
 }
 
-  SaveChildForm = (newKidInformation) => {
+  formSubmitEvent = (newKidInformation) => {
+    const{ isEditing, editId } = this.state;
     const uid= autheRequests.getCurrentUid();
+    if (isEditing) {
+      newKidInformation.uid = autheRequests.getCurrentUid();
+      kidRequest.putRequest(editId, newKidInformation)
+        .then(() => {
+          kidRequest.getKids(uid)
+            .then((kids) => {
+              this.setState({ kids, isEditing: false, editId: '-1' });
+            });
+        })
+        .catch(err => console.error('error with listings post', err));
+    } else {
     newKidInformation.uid = autheRequests.getCurrentUid();
     kidRequest.postKidRequest(newKidInformation).then(() => {
       kidRequest.getKids(uid).then((kids) => {
@@ -46,9 +60,11 @@ deleteOneKid = (kidId) => {
     })
     .catch(err => console.error('error with kids post', err));
   }
+}
+passKidToEdit = kidId => this.setState({ isEditing: true, editId: kidId });
 
   render() {
-      const { profile } = this.state;
+      const { profile, isEditing, editId } = this.state;
 
     return (
       <div>
@@ -57,10 +73,14 @@ deleteOneKid = (kidId) => {
         </div>
           <div className="kid-form-and-info">
             <div className="kids-home">
-              <KidsHome kids={this.state.kids} deleteSingleKid ={this.deleteOneKid}/>
+              <KidsHome
+              kids={this.state.kids}
+              deleteSingleKid ={this.deleteOneKid}
+              passKidToEdit={this.passKidToEdit}
+              />
             </div>
             <div className="kid-registration-form">
-              <KidRegistrationForm SaveChildForm={this.SaveChildForm}/>
+              <KidRegistrationForm SaveChildForm={this.formSubmitEvent} isEditing={isEditing} editId={editId}/>
             </div>
           </div>
           </div>

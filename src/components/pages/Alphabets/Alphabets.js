@@ -28,19 +28,27 @@ firstPageAlphabets = () => {
 clickNextPage = () => {
   if(this.state.page === 1) {
       const { alphabets } = this.state;
-        let perPageAlphabets = alphabets.slice(28,35);
+        let perPageAlphabets = alphabets.slice(28,56);
         this.setState({ perPageAlphabets })
     this.setState({ page:2 });
     }
     if (this.state.page === 2) {
       alphabetRequest.getAlphabets().then((alphabet) => {
-          let perPageAlphabets = alphabet.slice(35,51);
+          let perPageAlphabets = alphabet.slice(56,84);
           this.setState({ perPageAlphabets })
       });
     this.setState({ page:3 });
     }
-    if(this.state.page === 3) {
+    if (this.state.page === 3) {
+      alphabetRequest.getAlphabets().then((alphabet) => {
+          let perPageAlphabets = alphabet.slice(84,105);
+          this.setState({ perPageAlphabets })
+      });
+    this.setState({ page:4 });
+    }
+    if(this.state.page === 4) {
       this.firstPageAlphabets();
+      this.setState({ page:1 });
     }
 }
 

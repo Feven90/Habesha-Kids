@@ -6,9 +6,6 @@ class AlphabetItem extends React.Component {
   // static propTypes = {
   //   tutorial: tutorialShape,
   // }
-state = { 
-  play: false
-};
 
 clickAlphabet = () => {
   const x=document.getElementById(this.props.alphabet.id);
