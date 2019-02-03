@@ -1,24 +1,39 @@
 {
-"key": {
+"red": {
+  "name":"Red.png",
 "colorAudio": "key.mp3"
   },
-"tikur": {
-  "colorAudio": "tikur.mp3"
+"black": {
+  "name":"black.jpg",
+  "colorAudio": "key.mp3"
 },
- "bicha": {
-  "colorAudio": "bicha.mp3"
+ "yellow": {
+   "name": "yellow.JPG",
+  "colorAudio": "key.mp3"
 },
-"arenguade": {
-  "colorAudio": "arenguade.mp3"
+"green": {
+  "name": "green.jpeg",
+  "colorAudio": "key.mp3"
 },
-"buni": {
-    "colorAudio": "buni.mp3"
+"brown": {
+  "name": "brown.jpg",
+    "colorAudio": "key.mp3"
 },
-"gracha": {
-  "colorAudio": "gracha.mp3"
+"purple": {
+  "name": "purple.png",
+  "colorAudio": "key.mp3"
 },
-"rose": {
-  "colorAudio": "rose.mp3"
+"pink": {
+  "name": "pink.jpg",
+  "colorAudio": "key.mp3"
+},
+"white": {
+  "name": "white.jpg",
+  "colorAudio": "key.mp3"
+},
+"orange": {
+  "name": "orange.jpg",
+  "colorAudio": "key.mp3"
 }
 }
 

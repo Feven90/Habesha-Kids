@@ -3,26 +3,25 @@ import apiKeys from '../apiKeys';
 
 
 const firebaseUrl = apiKeys.firebaseConfig.databaseURL;
-const getAlphabets = () => new Promise((resolve, reject) => {
+const getColors = () => new Promise((resolve, reject) => {
   axios
-    .get(`${firebaseUrl}/alphabets.json`)
+    .get(`${firebaseUrl}/colors.json`)
     .then((res) => {
-      let alphabets = [];
+      let colors = [];
       if (res.data !== null) {
         Object.keys(res.data).forEach((key) => {
           res.data[key].id = key;
-          alphabets.push(res.data[key]);
-          alphabets.sort(function(a, b){return a.order - b.order});
+          colors.push(res.data[key]);
+          colors.sort(function(a, b){return a.order - b.order});
 
         });
       }
-      resolve(alphabets);
+      resolve(colors);
     })
     .catch(err => reject(err));
 });
 
 
-
 export default {
-  getAlphabets,
+  getColors,
 }

@@ -1,5 +1,9 @@
 import React from 'react';
 import './Home.scss';
+import alphabet from '../../../images/alphabet.jpg';
+import words from '../../../images/words.jpg';
+import numbers from '../../../images/numbers.jpg';
+import colors from '../../../images/colors.jpeg';
 
 class Home extends React.Component {
   changeView = (e) => {
@@ -14,37 +18,20 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className='Home mx-auto'>
-      <button class="btn btn-primary profile-button" onClick={this.clickProfile}>Profile</button>
-      <div className="card-deck mt-5">
-        <div className="card border-dark" id="alphabets" onClick={this.changeView}>
-          <div className="card-body text-center">
-            <h4 className="card-title"><i className="fas fa-comments fa-7x"></i></h4>
-            <h6 className="card-subtitle mb-2 text-muted">ፊደላት</h6>
-          </div>
+      <div className="wrap-home">
+        <div className="home-navigation" id="alphabets" onClick={this.changeView}>
+            <h6 className=""><img src={alphabet} alt="alphabet" /><p>ፊደላት/Alphabets</p></h6>
         </div>
-        <div className="card border-dark" id='numbers' onClick={this.changeView}>
-          <div className="card-body text-center">
-            <h4 className="card-title"><i className="fas fa-user-friends fa-7x"></i></h4>
-            <h6 className="card-subtitle mb-2 text-muted">ቁጥሮች</h6>
-          </div>
+        <div className="home-navigation" id='numbers' onClick={this.changeView}>
+            <h6 className=""><img src={numbers} alt="numbers" /><p>ቁጥሮች/Numbers</p></h6>
         </div>
-        <div className="card border-dark" id='colors' onClick={this.changeView}>
-          <div className="card-body text-center">
-            <h4 className="card-title"><i className="fas fa-sun fa-7x"></i></h4>
-            <h6 className="card-subtitle mb-2 text-muted">ቀለማት</h6>
-          </div>
+        <div className="home-navigation" id='colors' onClick={this.changeView}>
+            <h6 className=""><img src={colors} alt="colors" /><p>ቀለማት/Colors</p></h6>
         </div>
+        <div className="home-navigation" id='words' onClick={this.changeView}>
+            <h6 className=""><img src={words} alt="words" /><p>ቃላት/Words</p></h6>
       </div>
-      <div className="card-deck mt-5">
-        <div className="card border-dark" id='words' onClick={this.changeView}>
-          <div className="card-body text-center">
-            <h4 className="card-title"><i className="fas fa-calendar-alt fa-7x"></i></h4>
-            <h6 className="card-subtitle mb-2 text-muted">ቃላት</h6>
-          </div>
-        </div>
       </div>
-    </div>
     );
   }
 }

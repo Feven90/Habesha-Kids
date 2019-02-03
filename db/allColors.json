@@ -1,0 +1,32 @@
+{
+  "key": {
+    "name":"Red.png",
+  "colorAudio": "key.mp3"
+    },
+  "tikur": {
+    "name":"black.jpg",
+    "colorAudio": "tikur.mp3"
+  },
+   "bicha": {
+     "name": "yellow.JPG",
+    "colorAudio": "bicha.mp3"
+  },
+  "arenguade": {
+    "name": "green.jpg",
+    "colorAudio": "arenguade.mp3"
+  },
+  "buni": {
+    "name": "brown.jpg",
+      "colorAudio": "buni.mp3"
+  },
+  "gracha": {
+    "name": "purple.png",
+    "colorAudio": "gracha.mp3"
+  },
+  "rose": {
+    "name": "pink.jpg",
+    "colorAudio": "rose.mp3"
+  }
+  }
+  
+  

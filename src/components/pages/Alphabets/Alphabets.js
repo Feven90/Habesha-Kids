@@ -20,7 +20,7 @@ alphabetRequest.getAlphabets().then((alphabets) => {
 
 firstPageAlphabets = () => {
   alphabetRequest.getAlphabets().then((alphabets) => {
-    let perPageAlphabets = alphabets.slice(0,28);
+    let perPageAlphabets = alphabets.slice(0,35);
     this.setState({ perPageAlphabets });
 });
 }
@@ -28,20 +28,20 @@ firstPageAlphabets = () => {
 clickNextPage = () => {
   if(this.state.page === 1) {
       const { alphabets } = this.state;
-        let perPageAlphabets = alphabets.slice(28,56);
+        let perPageAlphabets = alphabets.slice(35,70);
         this.setState({ perPageAlphabets })
     this.setState({ page:2 });
     }
     if (this.state.page === 2) {
       alphabetRequest.getAlphabets().then((alphabet) => {
-          let perPageAlphabets = alphabet.slice(56,84);
+          let perPageAlphabets = alphabet.slice(70,105);
           this.setState({ perPageAlphabets })
       });
     this.setState({ page:3 });
     }
     if (this.state.page === 3) {
       alphabetRequest.getAlphabets().then((alphabet) => {
-          let perPageAlphabets = alphabet.slice(84,105);
+          let perPageAlphabets = alphabet.slice(91,105);
           this.setState({ perPageAlphabets })
       });
     this.setState({ page:4 });
