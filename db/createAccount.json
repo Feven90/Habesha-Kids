@@ -17,12 +17,14 @@
         "Kid1": {
           "name": "Smith",
           "parentUid": 12343,
-          "kidId": 6546
+          "kidId": 6546,
+          "score":10
         },
         "kid2": {
           "name": "rose",
           "parentUid": 12343,
-          "kidId": 6546
+          "kidId": 6546,
+          "score": 21
         }
       }
     }

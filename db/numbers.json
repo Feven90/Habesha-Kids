@@ -48,5 +48,55 @@
   "number": 10,
   "numberAudio": "andi.mp3",
   "order": 10
+},
+"eleven": {
+  "number": 11,
+  "numberAudio": "andi.mp3",
+  "order": 11
+},
+"twelve": {
+  "number": 12,
+  "numberAudio": "andi.mp3",
+  "order": 12
+},
+"thirteen": {
+  "number": 13,
+  "numberAudio": "andi.mp3",
+  "order": 13
+},
+"fourteen": {
+  "number": 14,
+  "numberAudio": "andi.mp3",
+  "order": 14
+},
+"fifteen": {
+  "number": 15,
+  "numberAudio": "andi.mp3",
+  "order": 15
+},
+"sixteen": {
+  "number": 16,
+  "numberAudio": "andi.mp3",
+  "order": 16
+},
+"seventeen": {
+  "number": 17,
+  "numberAudio": "andi.mp3",
+  "order": 17
+},
+"eighteen": {
+  "number": 18,
+  "numberAudio": "andi.mp3",
+  "order": 18
+},
+"nineteen": {
+  "number": 19,
+  "numberAudio": "andi.mp3",
+  "order": 19
+},
+"twenty": {
+  "number": 20,
+  "numberAudio": "andi.mp3",
+  "order": 20
 }
 }

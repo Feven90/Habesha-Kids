@@ -9,9 +9,7 @@ class NumberItem extends React.Component {
 
   clickNumber = () => {
     const x=document.getElementById(this.props.number.id);
-    console.log(x);
     x.play();
-    console.log("click");
   }
 
   render() {

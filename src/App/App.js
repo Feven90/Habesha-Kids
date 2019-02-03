@@ -10,6 +10,7 @@ import Home from '../components/pages/Home/Home';
 import ParentProfile from '../components/pages/ParentProfile/ParentProfile';
 import Alphabets from '../components/pages/Alphabets/Alphabets';
 import Numbers from '../components/pages/Numbers/Numbers';
+import Colors from '../components/pages/Colors/Colors';
 import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
 
@@ -84,6 +85,7 @@ class App extends React.Component {
                 <PrivateRoute path='/profile' component={ParentProfile} authed={this.state.authed} />
                 <PrivateRoute path='/alphabets' component={Alphabets} authed={this.state.authed} />
                 <PrivateRoute path='/numbers' component={Numbers} authed={this.state.authed} />
+                <PrivateRoute path='/colors' component={Colors} authed={this.state.authed} />
                 <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
               </Switch>
               </div>

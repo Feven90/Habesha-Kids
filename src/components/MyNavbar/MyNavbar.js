@@ -29,19 +29,22 @@ class MyNavbar extends React.Component {
         return (
         <Nav className='ml-auto' > {/* color='dark' dark navbar */}
         <NavItem>
-          <NavLink tag={RRNavLink} to='/alphabets' className="navigation">ፊደላት</NavLink>
+          <NavLink tag={RRNavLink} to='/alphabets' className="navigation btn btn-primary">ፊደላት<p>Alphabets</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/numbers' className="navigation">ቁጥሮች</NavLink>
+          <NavLink tag={RRNavLink} to='/numbers' className="navigation btn btn-primary">ቁጥሮች<p>Numbers</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/colors' className="navigation">ቀለማት</NavLink>
+          <NavLink tag={RRNavLink} to='/colors' className="navigation btn btn-primary">ቀለማት<p>Colors</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/words' className="navigation">ቃላት</NavLink>
+          <NavLink tag={RRNavLink} to='/words' className="navigation btn btn-primary">ቃላት<p>Words</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink onClick={logoutClickEvent} className="navigation">Logout</NavLink>
+          <NavLink tag={RRNavLink} to='/profile' className="navigation btn btn-primary">ገፅ<p>Profile</p></NavLink>
+          </NavItem>
+          <NavItem>
+          <NavLink onClick={logoutClickEvent} className="navigation btn btn-primary">ለመዉጣት<p>Logout</p></NavLink>
           </NavItem>
         </Nav>
         );

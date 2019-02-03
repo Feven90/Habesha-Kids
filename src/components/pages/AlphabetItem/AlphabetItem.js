@@ -9,9 +9,7 @@ class AlphabetItem extends React.Component {
 
 clickAlphabet = () => {
   const x=document.getElementById(this.props.alphabet.id);
-  console.log(x);
   x.play();
-  console.log("click");
 }
 
   render() {
@@ -19,12 +17,14 @@ clickAlphabet = () => {
     const sound = require(`../../../assets/sounds/letters/${alphabet.alphabetAudio}`);
   
     return (
+      // <div className="card">
         <div className="alphabet-item">
             <p onClick={this.clickAlphabet}>{alphabet.name}</p>
             <audio id={alphabet.id}>
             <source src={sound} type='audio/mp3'/>
           </audio>
         </div>
+        // </div>
     );
   }
 }

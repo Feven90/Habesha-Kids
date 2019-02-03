@@ -13,23 +13,15 @@ const getNumbers = () => new Promise((resolve, reject) => {
           res.data[key].id = key;
           numbers.push(res.data[key]);
           numbers.sort(function(a, b){return a.order - b.order});
-          // console.log(alphabets);
 
         });
       }
-      // const currentUser = parents.find(x => x.currentUser);
       resolve(numbers);
     })
     .catch(err => reject(err));
 });
 
-// const postKidRequest = kid => axios.post(`${firebaseUrl}/kids.json`, kid);
-
-// const deleteKid = kidId => axios.delete(`${firebaseUrl}/kids/${kidId}.json`);
-
 
 export default {
-  // postKidRequest,
   getNumbers,
-  // deleteKid
 }
