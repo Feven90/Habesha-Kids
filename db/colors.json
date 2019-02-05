@@ -1,39 +1,39 @@
 {
 "red": {
   "name":"Red.png",
-"colorAudio": "key.mp3"
+"colorAudio": "red.ogg"
   },
 "black": {
   "name":"black.jpg",
-  "colorAudio": "key.mp3"
+  "colorAudio": "black.ogg"
 },
  "yellow": {
    "name": "yellow.JPG",
-  "colorAudio": "key.mp3"
+  "colorAudio": "yellow.ogg"
 },
 "green": {
   "name": "green.jpeg",
-  "colorAudio": "key.mp3"
+  "colorAudio": "green.ogg"
 },
 "brown": {
   "name": "brown.jpg",
-    "colorAudio": "key.mp3"
+    "colorAudio": "brown.ogg"
 },
 "purple": {
   "name": "purple.png",
-  "colorAudio": "key.mp3"
+  "colorAudio": "red.ogg"
 },
 "pink": {
   "name": "pink.jpg",
-  "colorAudio": "key.mp3"
+  "colorAudio": "yellow.ogg"
 },
 "white": {
   "name": "white.jpg",
-  "colorAudio": "key.mp3"
+  "colorAudio": "white.ogg"
 },
 "orange": {
   "name": "orange.jpg",
-  "colorAudio": "key.mp3"
+  "colorAudio": "red.ogg"
 }
 }
 

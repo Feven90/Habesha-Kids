@@ -63,8 +63,8 @@ signUp = ( newParentInformation) => {
       <form>
         <div className="account"><h2>Create an account</h2></div>
       <div className="form-group">
-          <label>Name</label>
-          <input type="text" name='parentName' value={newParentInformation.name} className="form-control" onChange={this.nameChange} id="parent-name" placeholder="Feven"></input>
+          <label>Username</label>
+          <input type="text" name='parentName' value={newParentInformation.name} className="form-control" onChange={this.nameChange} id="parent-name" placeholder="username"></input>
         </div>
         <div className="form-group">
           <label>Email address</label>

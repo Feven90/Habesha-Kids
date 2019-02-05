@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Habesha Kids
+This application is educational app for kids. I have designed the app with Amharic(Ethiopian language), I came up with this idea because of what I see in my community. I have seen the struggle for Ethiopian parents to teach their kids their language. They either say they are too busy to sit and teach their kids the language or the kids will not be interested since there are no good resources. 
 
-In the project directory, you can run:
+This is what this application addresses, it is easy to use and fun for the kids. It has four pages: Alphabets, Numbers, Words and Colors page. To use this app, parent needs to create an account and they can add as many kids as they want. The kid can click on their name and go to the home page. 
 
-### `npm start`
+If the kid clicks on Alphabets page, they will see all Amharic alphabets and they can click on each letters to learn the sound. The rest three page also have the same functionality. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Login Page
+![main page](./src/images/login.png)
 
-### `npm test`
+2. Create Account
+![main page](./src/images/createAccount.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Profile Page
+![main page](./src/images/profile.png)
 
-### `npm run build`
+4. Alphabets
+![main page](./src/images/alphabets.png)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Numbers
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+![main page](./src/images/numbers.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. Colors 
+![main page](./src/images/colors.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technologies used 
+* SASS
+* Webpack
+* Axios
+* ES6 Modules
+* Firebase
+* React
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## How to run this project:
+- npx create-react-app my-app
+- npm init react-app my-app
+- create firebase project and add 
+- "parents": {
+      ".indexOn": "uid"
+    },
+      "kids": {
+      ".indexOn": "uid"
+    }
+- copy apiKey and use the same structure as apiKeys.js.example 
+- run `nmp install`
+- And do `npm start` to run the project
