@@ -29,22 +29,22 @@ class MyNavbar extends React.Component {
         return (
         <Nav className='ml-auto' > {/* color='dark' dark navbar */}
         <NavItem>
-          <NavLink tag={RRNavLink} to='/alphabets' className="navigation btn btn-primary">ፊደላት<p>Alphabets</p></NavLink>
+          <NavLink tag={RRNavLink} to='/alphabets' className="navigation btn btn-info">ፊደላት<p>Alphabets</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/numbers' className="navigation btn btn-primary">ቁጥሮች<p>Numbers</p></NavLink>
+          <NavLink tag={RRNavLink} to='/numbers' className="navigation btn btn-info">ቁጥሮች<p>Numbers</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/colors' className="navigation btn btn-primary">ቀለማት<p>Colors</p></NavLink>
+          <NavLink tag={RRNavLink} to='/colors' className="navigation btn btn-info">ቀለማት<p>Colors</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/words' className="navigation btn btn-primary">ቃላት<p>Words</p></NavLink>
+          <NavLink tag={RRNavLink} to='/words' className="navigation btn btn-info">ቃላት<p>Words</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/profile' className="navigation btn btn-primary">ገፅ<p>Profile</p></NavLink>
+          <NavLink tag={RRNavLink} to='/profile' className="navigation btn btn-info">ገፅ<p>Profile</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink onClick={logoutClickEvent} className="navigation btn btn-primary">ለመዉጣት<p>Logout</p></NavLink>
+          <NavLink onClick={logoutClickEvent} className="navigation btn btn-info">ለመዉጣት<p>Logout</p></NavLink>
           </NavItem>
         </Nav>
         );
