@@ -39,7 +39,7 @@ If the kid clicks on Alphabets page, they will see all Amharic alphabets and the
 ## How to run this project:
 - npx create-react-app my-app
 - npm init react-app my-app
-- create firebase project and add 
+- create firebase realtime database and to the rules add 
 - "parents": {
       ".indexOn": "uid"
     },
