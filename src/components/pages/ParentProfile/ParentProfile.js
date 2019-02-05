@@ -3,7 +3,7 @@ import 'firebase/auth';
 import getParentInfo from '../../../helpers/data/parentInformation';
 import autheRequests from '../../../helpers/data/autheRequests';
 import kidRequest from '../../../helpers/data/kidRequest';
-import KidRegistrationForm from '../KidsProfile/KidsRegistrationForm';
+import KidRegistrationForm from '../KidsRegistrationForm/KidsRegistrationForm';
 import KidsHome from '../KidsHome/KidsHome';
 import './ParentProfile.scss';
 
@@ -37,7 +37,7 @@ deleteOneKid = (kidId) => {
     .catch(err => console.error('error with delte single', err));
 }
 
-  formSubmitEvent = (newKidInformation) => {
+  kidFormSubmitEvent = (newKidInformation) => {
     const{ isEditing, editId } = this.state;
     const uid= autheRequests.getCurrentUid();
     if (isEditing) {
@@ -80,7 +80,7 @@ passKidToEdit = kidId => this.setState({ isEditing: true, editId: kidId });
               />
             </div>
             <div className="kid-registration-form">
-              <KidRegistrationForm SaveChildForm={this.formSubmitEvent} isEditing={isEditing} editId={editId}/>
+              <KidRegistrationForm SaveChildForm={this.kidFormSubmitEvent} isEditing={isEditing} editId={editId}/>
             </div>
           </div>
           </div>

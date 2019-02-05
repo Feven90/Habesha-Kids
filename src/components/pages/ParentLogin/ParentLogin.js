@@ -2,7 +2,7 @@ import React from 'react';
 import 'firebase/auth';
 import { Link } from 'react-router-dom';
 
-import './ParentRegistrationForm.scss';
+import './ParentLogin.scss';
 
 const parentInformation= {
   email: '',
@@ -11,7 +11,7 @@ const parentInformation= {
   uid: ''
 };
 
-class ParentRegistrationForm extends React.Component {
+class ParentLogin extends React.Component {
 
 state = {
   newParentInformation: parentInformation,
@@ -44,23 +44,12 @@ state = {
     this.props.signUp( this.state.newParentInformation)
   };
 
-  // formSubmit = (e) => {
-  //   e.preventDefault();
-  //   const { signUp } = this.props;
-  //   const userInformation = { ...this.state.newParentInformation };
-  //   console.log(userInformation.uid);
-  //   signUp(this.state.newParentInformation);
-  //   this.setState({ newParentInformation:parentInformation })
-  // }
-
   render () {
     const { newParentInformation } = this.state;
     return (
       <div className='col'>
       <form>
       <div className="form-group">
-           {/* <label>Name</label>
-          <input type="text" name='parentName' value={newParentInformation.name} className="form-control" onChange={this.nameChange} id="parent-name" placeholder="Feven"></input> */}
         </div> 
         <div className="form-group">
           <label>Email address</label>
@@ -71,7 +60,6 @@ state = {
           <input type="password" name='password' value={newParentInformation.password} className="form-control" onChange={this.passwordChange} id="password" placeholder="Password"></input>
         </div>
         <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.login}>Log In</button>
-        {/* <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.formSubmit}>Sign Up</button> */}
         <Link to={`/CreateAccount`}>Register</Link>
 
       </form>
@@ -82,4 +70,4 @@ state = {
 
 
 
-export default ParentRegistrationForm;
+export default ParentLogin;

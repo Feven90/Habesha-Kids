@@ -1,72 +1,72 @@
 {
   "ha": {
     "name":"ሀ",
-      "alphabetAudio": "ha.mp3",
+      "alphabetAudio": "ha.ogg",
       "order": 1
   },
   "hu": {
     "name":"ሁ",
-    "alphabetAudio": "ha.mp3",
+    "alphabetAudio": "hu.ogg",
     "order": 2
   },
   "hi": {
     "name":"ሂ",
-    "alphabetAudio": "ha.mp3",
+    "alphabetAudio": "hi.ogg",
     "order": 3
   },
 "hae": {
   "name":"ሃ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "ha.ogg",
   "order": 4
 },
 "he": {
   "name":"ሄ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "hei.ogg",
   "order": 5
 },
 "h": {
   "name":"ህ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "h.ogg",
   "order": 6
 },
 "ho": {
   "name":"ሆ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "ho.ogg",
   "order": 7
 },
 "le": {
   "name":"ለ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "le.ogg",
   "order": 8
 },
 "lu": {
   "name":"ሉ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "lu.ogg",
   "order": 9
 },
 "li": {
   "name":"ሊ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "li.ogg",
   "order": 10
 },
 "la": {
   "name":"ላ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "la.ogg",
   "order": 11
 },
 "lei": {
   "name":"ሌ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "lei.ogg",
   "order": 12
 },
 "l": {
   "name":"ል",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "l.ogg",
   "order": 13
 },
 "lo": {
   "name":"ሎ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "lo.ogg",
   "order": 14
 },
 "Ha": {
@@ -142,142 +142,142 @@
 },
 "se": {
   "name":"ሠ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "se.ogg",
   "order": 29
 }, 
 "su": {
   "name":"ሡ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "su.ogg",
   "order": 30
 },
 "si": {
   "name":"ሢ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "si.ogg",
   "order": 31
 },
 "sa": {
   "name":"ሣ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sa.ogg",
   "order": 32
 },
 "sei": {
   "name":"ሤ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sei.ogg",
   "order": 33
 },
 "s": {
   "name":"ሥ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "s.ogg",
   "order": 34
 },
 "so": {
   "name":"ሦ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "so.ogg",
   "order": 35
 },
 "re": {
   "name":"ረ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "re.ogg",
   "order": 36
 },
 "ru": {
   "name":"ሩ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "ru.ogg",
   "order": 37
 },
 "ri": {
   "name":"ሪ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "ri.ogg",
   "order": 38
 },
 "ra": {
   "name":"ራ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "ra.ogg",
   "order": 39
 },
 "rei": {
   "name":"ሬ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "rei.ogg",
   "order": 40
 },
 "r": {
   "name":"ር",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "r.ogg",
   "order": 41
 },
 "ro": {
   "name":"ሮ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "ro.ogg",
   "order": 42
 },
 "Se": {
   "name":"ሰ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "se.ogg",
   "order": 43
 },
 "Su": {
   "name":"ሱ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "su.ogg",
   "order": 44
 },
 "Si": {
   "name":"ሲ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "si.ogg",
   "order": 45
 },
 "Sa": {
   "name":"ሳ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sa.ogg",
   "order": 46
 },
 "Sei": {
   "name":"ሴ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sei.ogg",
   "order": 47
 },
 "S": {
   "name":"ስ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "s.ogg",
   "order": 48
 },
 "So": {
   "name":"ሶ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "so.ogg",
   "order": 49
 },
 "she": {
   "name":"ሸ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "she.ogg",
   "order": 50
 },
 "shu": {
   "name":"ሹ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "shu.ogg",
   "order": 51
 },
 "shi": {
   "name":"ሺ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "shi.ogg",
   "order": 52
 },
 "sha": {
   "name":"ሻ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sha.ogg",
   "order": 53
 },
 "shei": {
   "name":"ሼ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "shei.ogg",
   "order": 54
 },
 "sh": {
   "name":"ሽ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sh.ogg",
   "order": 55
 },
 "sho": {
   "name":"ሾ",
-  "alphabetAudio": "ha.mp3",
+  "alphabetAudio": "sho.ogg",
   "order": 56
 },
 "ke": {

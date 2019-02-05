@@ -41,7 +41,7 @@ clickNextPage = () => {
     }
     if (this.state.page === 3) {
       alphabetRequest.getAlphabets().then((alphabet) => {
-          let perPageAlphabets = alphabet.slice(91,105);
+          let perPageAlphabets = alphabet.slice(105,140);
           this.setState({ perPageAlphabets })
       });
     this.setState({ page:4 });

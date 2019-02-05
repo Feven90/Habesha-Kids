@@ -4,7 +4,7 @@ import firebase from 'firebase/app';
 import postUser from '../../../helpers/data/parentInformation';
 import autheRequests from '../../../helpers/data/autheRequests';
 
-// import './ParentRegistrationForm.scss';
+import './CreateAccount.scss';
 
 const parentInformation= {
   email: '',
@@ -51,8 +51,7 @@ signUp = ( newParentInformation) => {
   formSubmit = (e) => {
     e.preventDefault();
     const userInformation = { ...this.state.newParentInformation };
-    console.log(userInformation.uid);
-    this.signUp(this.state.newParentInformation);
+    this.signUp(userInformation);
     this.setState({ newParentInformation:parentInformation });
   }
 
