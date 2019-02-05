@@ -19,7 +19,7 @@ class ColorItem extends React.Component {
   
     return (
         // <div className="color-item">
-        <div className="cardd">
+        <div className="color-item">
             <img className="card-img-top" onClick={this.clickColor} src={colorName} alt="colors"/>
             <audio id={color.id}>
             <source src={sound}/>
