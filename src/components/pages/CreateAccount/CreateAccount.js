@@ -58,8 +58,10 @@ signUp = ( newParentInformation) => {
   render () {
     const { newParentInformation } = this.state;
     return (
+      <div className="wrap-registration">
       <div className='col'>
       <form>
+        <div className="account"><h2>Create an account</h2></div>
       <div className="form-group">
           <label>Name</label>
           <input type="text" name='parentName' value={newParentInformation.name} className="form-control" onChange={this.nameChange} id="parent-name" placeholder="Feven"></input>
@@ -74,6 +76,7 @@ signUp = ( newParentInformation) => {
         </div>
         <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.formSubmit}>Sign Up</button>
       </form>
+    </div>
     </div>
     );
   }
