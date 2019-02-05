@@ -706,23 +706,78 @@
   "order": 141
 },
 "U": {
-  "name":"ኖ",
+  "name":"ዑ",
   "alphabetAudio": "ha.mp3",
-  "order": 105
+  "order": 142
 },
-"no": {
-  "name":"ኖ",
+"E": {
+  "name":"ዒ",
   "alphabetAudio": "ha.mp3",
-  "order": 105
+  "order": 143
 },
-"no": {
-  "name":"ኖ",
+"AA": {
+  "name":"ዓ",
   "alphabetAudio": "ha.mp3",
-  "order": 105
+  "order": 144
 },
-"no": {
-  "name":"ኖ",
+"Aie": {
+  "name":"ዔ",
   "alphabetAudio": "ha.mp3",
-  "order": 105
+  "order": 145
 },
+"Ei": {
+  "name":"ዕ",
+  "alphabetAudio": "ha.mp3",
+  "order": 146
+},
+"O": {
+  "name":"ዖ",
+  "alphabetAudio": "ha.mp3",
+  "order": 147
+},
+"ze": {
+  "name":"ዘ",
+  "alphabetAudio": "ha.mp3",
+  "order": 148
+},
+"zu": {
+  "name":"ዙ",
+  "alphabetAudio": "ha.mp3",
+  "order": 149
+},
+"zi": {
+  "name":"ዚ",
+  "alphabetAudio": "ha.mp3",
+  "order": 150
+},
+"za": {
+  "name":"ዛ",
+  "alphabetAudio": "ha.mp3",
+  "order": 151
+},
+"zei": {
+  "name":"ዜ",
+  "alphabetAudio": "ha.mp3",
+  "order": 152
+},
+"z": {
+  "name":"ዝ",
+  "alphabetAudio": "ha.mp3",
+  "order": 153
+},
+"zo": {
+  "name":"ዞ",
+  "alphabetAudio": "ha.mp3",
+  "order": 154
+},
+"Ze": {
+  "name":"ዠ",
+  "alphabetAudio": "ha.mp3",
+  "order": 155
+},
+"Zu": {
+  "name":"ዘ",
+  "alphabetAudio": "ha.mp3",
+  "order": 156
+}
 }
