@@ -48,4 +48,4 @@ If the kid clicks on Alphabets page, they will see all Amharic alphabets and the
     }
 - copy apiKey and use the same structure as apiKeys.js.example 
 - run `nmp install`
-- And do `npm start` to run the project
+- And do `npm start` to run the project on http://localhost:3000
