@@ -62,7 +62,7 @@ componentDidUpdate(prevProps) {
       <form className="kids-form"> 
       <div className="form-group">
           <label>Name</label>
-          <input type="text" name='kidName' value={newKidInformation.name} className="form-control kid-name" onChange={this.nameChange} id="kid-name" placeholder="Feven"></input>
+          <input type="text" name='kidName' value={newKidInformation.name} className="form-control kid-name" onChange={this.nameChange} id="kid-name" placeholder="name"></input>
         </div>
         <div className="form-group">
           <label>Age</label>
