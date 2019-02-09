@@ -46,7 +46,28 @@ clickNextPage = () => {
       });
     this.setState({ page:4 });
     }
-    if(this.state.page === 4) {
+    if (this.state.page === 4) {
+      alphabetRequest.getAlphabets().then((alphabet) => {
+          let perPageAlphabets = alphabet.slice(140,175);
+          this.setState({ perPageAlphabets })
+      });
+    this.setState({ page:5 });
+    }
+    if (this.state.page === 5) {
+      alphabetRequest.getAlphabets().then((alphabet) => {
+          let perPageAlphabets = alphabet.slice(175,210);
+          this.setState({ perPageAlphabets })
+      });
+    this.setState({ page:6 });
+    }
+    if (this.state.page === 6) {
+      alphabetRequest.getAlphabets().then((alphabet) => {
+          let perPageAlphabets = alphabet.slice(210,245);
+          this.setState({ perPageAlphabets })
+      });
+    this.setState({ page:7 });
+    }
+    if(this.state.page === 7) {
       this.firstPageAlphabets();
       this.setState({ page:1 });
     }

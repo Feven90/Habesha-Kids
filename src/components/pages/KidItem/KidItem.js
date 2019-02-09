@@ -28,10 +28,10 @@ class KidItem extends React.Component {
           <Link to={`/home/${kid.id}`} className="kid-link"><span className="col-2 kids-info" >{kid.name}</span></Link>
           <div>
           <span className="col">
-              <button className="btn btn-danger" onClick={this.editKidEvent}> <i class="fas fa-pencil-alt"></i></button>
+              <button className="btn btn-danger" onClick={this.editKidEvent}> <i className="fas fa-pencil-alt"></i></button>
             </span>
             <span className="col">
-              <button className="btn btn-danger" onClick={this.deleteKidEvent}> <i class="fas fa-trash-alt"></i></button>
+              <button className="btn btn-danger" onClick={this.deleteKidEvent}> <i className="fas fa-trash-alt"></i></button>
             </span>
             </div>       
             </li>
