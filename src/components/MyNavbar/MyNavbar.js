@@ -44,7 +44,7 @@ class MyNavbar extends React.Component {
           <NavLink tag={RRNavLink} to='/profile' className="navigation btn btn-info">ገፅ<p>Profile</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink onClick={logoutClickEvent} className="navigation btn btn-info">ለመዉጣት<p>Logout</p></NavLink>
+          <NavLink onClick={logoutClickEvent} className="navigation logout btn btn-info">ለመዉጣት<p>Logout</p></NavLink>
           </NavItem>
         </Nav>
         );
