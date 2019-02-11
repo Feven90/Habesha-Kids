@@ -1,5 +1,5 @@
 import React from 'react';
-// import './NumberItem.scss';
+import './Math.scss';
 import kidRequest from '../../../helpers/data/kidRequest';
 
 const mathInformation = {
@@ -7,7 +7,8 @@ const mathInformation = {
   firstNumber: 0,
   secondNumber: 0,
   answer: 0,
-  result: 0
+  result: 0,
+  operation:''
 }
 class Math extends React.Component {
 
@@ -37,28 +38,33 @@ secondNumberChange = (e) => {
 answerChange = (e) => {
   this.formFieldStringState('answer', e);
 }
-calculate = (e) => {
-  let Num1= document.getElementsByClassName("num1").innerHTML;
-  let Num2 = document.getElementsByClassName("num2").innerHTML;
-  // let kidAnswer = document.getElementsByClassName("answer").value;
-  console.log(Num1);
-  console.log(Num2);
-  let operation = e.target.value;
-  console.log(operation);
-  if(operation === 'add')
-  this.setState({ result: (parseInt(Num1) + parseInt(Num2)) });
+getOperation = (e) => {
+  console.log(e.target.value);
+ this.setState({ operation: e.target.value});
+}
+
+calculate = () => {
+  if(this.state.operation === 'add') {
+  let Num1 = parseInt(this.state.newInformation.firstNumber);
+  let Num2 = parseInt(this.state.newInformation.secondNumber);
+  this.setState({ result: Num1  + Num2});
+  }
 }
 
   render() {
     const { newInformation} = this.state;
 
     return (
-      <div> 
+      <div className="wrap-math"> 
         <div className="col numbers">
         <div>
           <label>Enter first number</label>
             <input type="number" className="num1" placeholder="1" value={newInformation.firstNumber} onChange={this.firstNumberChange}/>
         </div>
+        <button className="btn btn-danger add operation" value="add" onClick={this.getOperation}>+</button>
+         <button className="btn btn-danger subtract operation" value="subtract">-</button>
+         <button className="btn btn-danger divid operation" value="divid">/</button>
+         <button className="btn btn-danger multiply operation" value="multiply">X</button>
         <div>
           <label>Enter second number</label>
           <input type="number" className="num2" placeholder="1" value={newInformation.secondNumber} onChange={this.secondNumberChange}/>
@@ -67,13 +73,10 @@ calculate = (e) => {
           <label>Your Answer</label>
           <input type="number" className="answer" placeholder="1" value={newInformation.answer} onChange={this.answerChange}/>
         </div>
-         <button className="btn btn-danger add" vlaue="add">+</button>
-         <button className="btn btn-danger subtract" value="subtract">-</button>
-         <button className="btn btn-danger divid" value="divid">/</button>
-         <button className="btn btn-danger multiply" value="multiply">X</button>
+         
 
    <input type="submit" value="Submit" onClick={this.calculate} />
-   <h2>{newInformation.result}</h2>
+   <h2>{this.state.result}</h2>
         </div>
       </div>
     );
