@@ -1,0 +1,21 @@
+.input-numbers {
+  height: 35px;
+  width: 45px;
+  font-size: 2em;
+}
+.card {
+  width: 350px;
+  margin: 5px;
+}
+.submit {
+  width: 100px;
+  justify-content: center;
+}
+.wrap-items {
+  margin: 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

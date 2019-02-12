@@ -22,10 +22,11 @@ class KidItem extends React.Component {
 
   render() {
     const { kid } = this.props;
+    console.log(kid);
     return (
       <div>
         <li className="kids-item kids-listing">
-          <Link to={`/home/${kid.id}`} className="kid-link"><span className="col-2 kids-info" >{kid.name}</span></Link>
+          <Link to={`/math/${kid.id}`} className="kid-link" kid={kid.id}><span className="col-2 kids-info" >{kid.name}</span></Link>
           <div>
           <span className="col">
               <button className="btn btn-danger" onClick={this.editKidEvent}> <i className="fas fa-pencil-alt"></i></button>

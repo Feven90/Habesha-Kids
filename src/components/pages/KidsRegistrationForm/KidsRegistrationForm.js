@@ -59,7 +59,7 @@ componentDidUpdate(prevProps) {
     return (
       <div className=''>
       {title()}
-      <form className="kids-form"> 
+      <form className="kids-form" onSubmit={this.formSubmit}> 
       <div className="form-group">
           <label>Name</label>
           <input type="text" name='kidName' value={newKidInformation.name} className="form-control kid-name" onChange={this.nameChange} id="kid-name" placeholder="name"></input>
@@ -68,7 +68,7 @@ componentDidUpdate(prevProps) {
           <label>Age</label>
           <input type="number" name='age' value={newKidInformation.age} className="form-control kid-age" onChange={this.ageChange} id="kid-age" aria-describedby="ageHelp" placeholder="2"></input>
         </div>
-        <button type="submit" className="btn btn-primary" autoComplete="current-password" onClick={this.formSubmit}>Save</button>
+        <button type="submit" className="btn btn-primary" autoComplete="current-password">Save</button>
       </form>
     </div>
     );
