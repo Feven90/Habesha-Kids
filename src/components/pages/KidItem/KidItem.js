@@ -1,6 +1,8 @@
 import React from 'react';
 import './KidItem.scss';
 import { Link } from 'react-router-dom';
+import MathExercises from '../MathExercises/MathExercises';
+
 // import tutorialShape from '../../helpers/propz/tutorialShape';
 // import authRequests from '../../../helpers/data/autheRequests';
 
@@ -22,11 +24,13 @@ class KidItem extends React.Component {
 
   render() {
     const { kid } = this.props;
-    console.log(kid);
+    console.log(kid.id);
     return (
       <div>
         <li className="kids-item kids-listing">
-          <Link to={`/math/${kid.id}`} className="kid-link" kid={kid.id}><span className="col-2 kids-info" >{kid.name}</span></Link>
+          <Link to={{ pathname:`/math/${kid.id}`,
+                      state: { kid}}}
+        className="kid-link"><span className="col-2 kids-info" >{kid.name}</span><span className="col-2 kids-info" >score:{kid.score}</span></Link>
           <div>
           <span className="col">
               <button className="btn btn-danger" onClick={this.editKidEvent}> <i className="fas fa-pencil-alt"></i></button>
