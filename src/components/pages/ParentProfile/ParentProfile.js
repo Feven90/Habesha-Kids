@@ -42,6 +42,7 @@ deleteOneKid = (kidId) => {
     const uid= autheRequests.getCurrentUid();
     if (isEditing) {
       newKidInformation.uid = autheRequests.getCurrentUid();
+      newKidInformation.score = 0;
       kidRequest.putRequest(editId, newKidInformation)
         .then(() => {
           kidRequest.getKids(uid)
@@ -52,6 +53,7 @@ deleteOneKid = (kidId) => {
         .catch(err => console.error('error with listings post', err));
     } else {
     newKidInformation.uid = autheRequests.getCurrentUid();
+    newKidInformation.score = 0;
     kidRequest.postKidRequest(newKidInformation).then(() => {
       kidRequest.getKids(uid).then((kids) => {
         console.log(kids);

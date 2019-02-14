@@ -64,7 +64,7 @@ getAddOperation = (e) => {
 
     return (
       <div className="all">
-        <MathExercises kid={kid}/>
+        {/* <MathExercises kid={kid}/> */}
       </div>
     );
   }

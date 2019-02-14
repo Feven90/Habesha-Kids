@@ -10,7 +10,7 @@ import Home from '../components/pages/Home/Home';
 import ParentProfile from '../components/pages/ParentProfile/ParentProfile';
 import Alphabets from '../components/pages/Alphabets/Alphabets';
 import Numbers from '../components/pages/Numbers/Numbers';
-import Math from '../components/pages/Math/Math';
+import MathExercises from '../components/pages/MathExercises/MathExercises';
 import Colors from '../components/pages/Colors/Colors';
 import Auth from '../components/pages/Auth/Auth';
 import CreateAccount from '../components/pages/CreateAccount/CreateAccount';
@@ -87,7 +87,7 @@ class App extends React.Component {
                 <PrivateRoute path='/profile' component={ParentProfile} authed={this.state.authed} />
                 <PrivateRoute path='/alphabets' component={Alphabets} authed={this.state.authed} />
                 <PrivateRoute path='/numbers' component={Numbers} authed={this.state.authed} />
-                <PrivateRoute path='/math' component={Math} authed={this.state.authed} />
+                <PrivateRoute path='/math' component={MathExercises} authed={this.state.authed} />
                 <PrivateRoute path='/colors' component={Colors} authed={this.state.authed} />
                 <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
                 <PublicRoute path='/createAccount' component={CreateAccount} authed={this.state.authed} />

@@ -3,7 +3,7 @@ import React from 'react';
 // import tutorialShape from '../../helpers/propz/tutorialShape';
 
 import KidItem from '../KidItem/KidItem';
-
+import MathExercises from '../MathExercises/MathExercises';
 import './KidsHome.scss';
 
 class KidsHome extends React.Component {
@@ -25,6 +25,7 @@ class KidsHome extends React.Component {
     return (
       <div className="kids">
         <ul>{kidItemComponents}</ul>
+        {/* <MathExercises kids={kids}/> */}
       </div>
     );
   }
