@@ -29,10 +29,13 @@ const getSingleKid = kidId => axios.get(`${firebaseUrl}/kids/${kidId}.json`);
 
 const putRequest = (kidId, kid) => axios.put(`${firebaseUrl}/kids/${kidId}.json`, kid);
 
+const updateScore = (kidId) => axios.patch(`${firebaseUrl}/tasks/${kidId}.json`);
+
 export default {
   postKidRequest,
   getKids,
   deleteKid,
   putRequest,
-  getSingleKid
+  getSingleKid,
+  updateScore
 }

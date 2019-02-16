@@ -36,6 +36,14 @@ deleteOneKid = (kidId) => {
     })
     .catch(err => console.error('error with delte single', err));
 }
+score = () => {
+  // const { kid }  = this.props.location.state;
+  const kidScore = this.state.kid.score;
+  // kidRequest.updateScore(kidId).then((score) => {
+  //   this.setState({ kidId: kidScore + 10});
+    console.log(kidScore);
+  // })
+  }
 
   kidFormSubmitEvent = (newKidInformation) => {
     const{ isEditing, editId } = this.state;
@@ -79,6 +87,7 @@ passKidToEdit = kidId => this.setState({ isEditing: true, editId: kidId });
               kids={this.state.kids}
               deleteSingleKid ={this.deleteOneKid}
               passKidToEdit={this.passKidToEdit}
+              kidScore={this.score}
               />
             </div>
             <div className="kid-registration-form">

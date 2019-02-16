@@ -38,9 +38,6 @@ class MyNavbar extends React.Component {
           <NavLink tag={RRNavLink} to='/colors' className="navigation btn btn-info">ቀለማት<p>Colors</p></NavLink>
           </NavItem>
           <NavItem>
-          <NavLink tag={RRNavLink} to='/words' className="navigation btn btn-info">ቃላት<p>Words</p></NavLink>
-          </NavItem>
-          <NavItem>
           <NavLink tag={RRNavLink} to='/profile' className="navigation btn btn-info">ገፅ<p>Profile</p></NavLink>
           </NavItem>
           <NavItem>
@@ -55,7 +52,7 @@ class MyNavbar extends React.Component {
       <div className="my-navbar">
         <div>
           <Navbar expand="md"> {/*dark*/}
-            <NavbarBrand href="/home" className="navigation">ሐበሻ ልጆች</NavbarBrand>
+            <NavbarBrand href="/home" className="navigation habesha"><h2 className="habesh">ሐበሻ ልጆች</h2></NavbarBrand>
             <NavbarToggler onClick={e => this.toggle(e)} />
             <Collapse isOpen={this.state.isOpen} navbar>
               {buildNavbar()}
