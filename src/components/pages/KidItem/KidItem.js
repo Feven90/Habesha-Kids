@@ -21,16 +21,20 @@ class KidItem extends React.Component {
     const { passKidToEdit, kid } = this.props;
     passKidToEdit(kid.id);
   }
-
+  // }
+  
   render() {
-    const { kid } = this.props;
+    const { kid, kidScore } = this.props;
     console.log(kid.id);
     return (
-      <div>
+      <div className="card">
         <li className="kids-item kids-listing">
           <Link to={{ pathname:`/math/${kid.id}`,
-                      state: { kid}}}
-        className="kid-link"><span className="col-2 kids-info" >{kid.name}</span><span className="col-2 kids-info" >score:{kid.score}</span></Link>
+                  state: { kid},
+                params: kidScore}}
+                  className="kid-link">
+                  <span className="col-2 kids-info" >{kid.name}</span>
+          </Link>
           <div>
           <span className="col">
               <button className="btn btn-danger" onClick={this.editKidEvent}> <i className="fas fa-pencil-alt"></i></button>
