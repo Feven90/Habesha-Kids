@@ -38,10 +38,10 @@ deleteOneKid = (kidId) => {
 }
 score = () => {
   // const { kid }  = this.props.location.state;
-  const kidScore = this.state.kid.score;
+  // const kidScore = this.state.kid.score;
   // kidRequest.updateScore(kidId).then((score) => {
   //   this.setState({ kidId: kidScore + 10});
-    console.log(kidScore);
+    console.log("kid's score");
   // })
   }
 

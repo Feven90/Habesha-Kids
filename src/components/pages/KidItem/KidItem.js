@@ -31,7 +31,7 @@ class KidItem extends React.Component {
         <li className="kids-item kids-listing">
           <Link to={{ pathname:`/math/${kid.id}`,
                   state: { kid},
-                params: kidScore}}
+                params:{kidScore}}}
                   className="kid-link">
                   <span className="col-2 kids-info" >{kid.name}</span>
           </Link>
