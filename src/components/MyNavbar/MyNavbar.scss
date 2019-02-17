@@ -4,7 +4,7 @@
   background-color: rgb(195, 247, 128);
 }
 .navigation {
-  color: rgb(17, 17, 16);
+  // color: rgb(17, 17, 16);
   height: 60px;
   margin: 0 1px;
   p {
@@ -20,11 +20,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px rgb(114, 16, 16);
   // margin:auto;
   // padding-top: 10px;
   // padding-bottom: 5px;  color: rgb(35, 35, 226);
  
     font-family: 'Hanalei Fill', cursive;
+    h2 { color: blueviolet; }
 
 }

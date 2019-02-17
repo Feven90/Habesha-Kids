@@ -1,42 +1,45 @@
 import React from 'react';
 import './MathExercises.scss';
 import kidRequest from '../../../helpers/data/kidRequest';
-
 const mathInformation = {
-  result: 0,
   operation:'',
-  firstNumber:'',
-  secondNumber:'',
-  thirdNumber:'',
-  fourthNumber:'',
+  firstNumber:0,
+  secondNumber:0,
   answer:'',
-  subtractionAnswer:'',
-  fifthNumber: '',
-  sixthNumber: '',
-  divisionanswer:'',
   score: 0,
+
   // submit
 }
 class MathExercises extends React.Component {
 
   state = {
     newInformation: mathInformation,
+    kid:[],
+    isCorrect: true,
+    isCongrats: false,
+    result: 0,
   }
 
 
-// componentDidMount() {
-// const { kid } = this.props;
-// // console.log(kid);
-// }
+componentDidMount() {
+  const kidId = this.props.location.state.kid.id;
+  kidRequest.getSingleKid(kidId).then((kid) => {
+  console.log(kid.data);
+  this.setState({ kid: kid.data });
+});
+// console.log(kid);
+}
 
-formFieldStringState = (firstNumber, e) => {
+formFieldStringState = (name, e) => {
   e.preventDefault();
   const tempInfo = { ...this.state.newInformation};
-  tempInfo[firstNumber] = e.target.value;
+  tempInfo[name] = e.target.value;
   this.setState({ newInformation: tempInfo});
+  this.setState({ isCongrats:false })
 }
 firstNumberChange = (e) => {
   this.formFieldStringState('firstNumber', e);
+
 }
 
 secondNumberChange = (e) => {
@@ -45,22 +48,7 @@ secondNumberChange = (e) => {
 answerChange = (e) => {
   this.formFieldStringState('answer', e);
 }
-thirdNumberChange = (e) => {
-  this.formFieldStringState('thirdNumber', e);
-}
 
-fourthNumberChange = (e) => {
-  this.formFieldStringState('fourthNumber', e);
-}
-subtractionAnswerChange = (e) => {
-  this.formFieldStringState('subtractionAnswer', e);
-}
-fifthNumberChange = (e) => {
-  this.formFieldStringState('fifthNumber', e);
-}
-sixthNumberChange = (e) => {
-  this.formFieldStringState('sixthNumber', e);
-}
 operationChange = (e) => {
   this.formFieldStringState('operation', e);
 }
@@ -69,8 +57,40 @@ getOperation = (e) => {
  this.setState({ operation: e.target.value});
 }
 
+checkAnswer = () => {
+  let Result = this.state.result;
+  let Answer = parseInt(this.state.newInformation.answer);
+  if(Result === Answer) {
+    console.log('CORRECT')
+    this.setState({ isCorrect: true })
+    this.updateScore();
+  }
+  else{
+    this.setState({ isCorrect: false })
+    console.log('NOOOOOO')
+  }
+  }
+
+  updateScore = () => {
+    const { kid } = this.state;
+    const kidId = this.props.location.state.kid.id;
+    console.log(kidId);
+    const newScore = kid.score + 10;
+    console.log(newScore);
+    kid.id = kidId;
+   kid.score = newScore;
+    kidRequest.putRequest(kidId, kid).then(() => {
+      kidRequest.getSingleKid(kidId).then((kid) => {
+        console.log(kid.data);
+        this.setState({ kid: kid.data });
+      });
+    })
+    this.setState({ isCongrats: true})
+  }
+
 calculate = (e) => {
   // const { operation } = this.props;
+  this.setState({ isCongrats: true });
   let mathOperation = this.state.newInformation.operation; 
   let Num1 = parseInt(this.state.newInformation.firstNumber);
   let Num2 = parseInt(this.state.newInformation.secondNumber);
@@ -79,6 +99,7 @@ calculate = (e) => {
   }
   else if(mathOperation === '-') {
     this.setState({ result: Num1 - Num2 });
+   
   }
   else if(mathOperation === 'x') {
     this.setState({ result: Num1 * Num2 });
@@ -86,52 +107,41 @@ calculate = (e) => {
   else if(mathOperation === '/') {
     this.setState({ result: Num1 / Num2 });
   }
+  this.checkAnswer();
 }
 
 
-  // }
-scoreCard = () => {
-  // const { kidId } = this.props.location.state.kid.id;
-//  console.log(kidId);
-  const { kidScore }  = this.props.match.params;
-  console.log(kidScore);
-  }
 
-
-// calculateSubtraction = (e) => {
-//   // const { operation } = this.props; 
-//   // if(operation === 'add') {
-//   let Num3 = parseInt(this.state.newInformation.thirdNumber);
-//   let Num4 = parseInt(this.state.newInformation.fourthNumber);
-//   this.setState({ result: Num3  - Num4});
-//   // }
-// }
 
   render() {
-    const { kid } = this.props.location.state;
-    const { kiScore } = this.props;
+    const { kid, isCorrect, isCongrats } = this.state;
+    const { kidScore } = this.props;
     const { newInformation} = this.state;
     // console.log(this.state.newInformation.operation);
     // console.log(kidScore);
    
 
-    let Answer = parseInt(this.state.newInformation.answer);
-    let firstNumber = this.state.newInformation.firstNumber;
-    let secondNumber = this.state.newInformation.secondNumber;
-    let subtractionAnswer = parseInt(this.state.newInformation.subtractionAnswer);
-    let Result = this.state.result;
+    // let Answer = parseInt(this.state.newInformation.answer);
+    // let firstNumber = this.state.newInformation.firstNumber;
+    // let secondNumber = this.state.newInformation.secondNumber;
+    // let subtractionAnswer = parseInt(this.state.newInformation.subtractionAnswer);
+    // let Result = this.state.result;
 
-    // const tryAgain = () => {
-    //   if(Result !== Answer){
-    //     console.log(this.Result);
-    //     return (
-    //       <div>
-    //         <div>{cards()}</div>
-    //         <h2>Please try again!!</h2>
-    //     </div>
-    //     );
-    //   }
-    // }
+
+    const makeCongrats = () => {
+      if(isCongrats) {
+      if(isCorrect) {
+        return( 
+          <div><h2>Good Job!!</h2></div>
+        )
+      }
+      return(
+        <div><h2>Please Try Again!!</h2></div>
+      )
+      // kidScore();
+      }
+
+    }
     const cards = () => {
       return (
       <div className="wrap-items"> 
@@ -158,22 +168,12 @@ scoreCard = () => {
  </div>
  {/* {this.score()} */}
  <h2> Score: {kid.score}</h2>
+ {makeCongrats()}
  </div>
     </div>
       );
     }
-    if(Result === Answer) {
-      console.log(Result)
-      return (
-        <div>
-          {cards()}
-            {/* {this.scoreCard} */}
-          
-          <h2 className="good-job">Good Job!!</h2>
-          
-        </div>
-      );
-    }
+
     
     // if(Result == Answer) {
     //   return (
