@@ -3,12 +3,11 @@ import './MathExercises.scss';
 import kidRequest from '../../../helpers/data/kidRequest';
 const mathInformation = {
   operation:'',
-  firstNumber:0,
-  secondNumber:0,
+  firstNumber:'',
+  secondNumber:'',
   answer:'',
   score: 0,
 
-  // submit
 }
 class MathExercises extends React.Component {
 
@@ -27,7 +26,6 @@ componentDidMount() {
   console.log(kid.data);
   this.setState({ kid: kid.data });
 });
-// console.log(kid);
 }
 
 formFieldStringState = (name, e) => {
@@ -60,6 +58,7 @@ getOperation = (e) => {
 checkAnswer = () => {
   let Result = this.state.result;
   let Answer = parseInt(this.state.newInformation.answer);
+  console.log(Result);
   if(Result === Answer) {
     console.log('CORRECT')
     this.setState({ isCorrect: true })
@@ -88,44 +87,37 @@ checkAnswer = () => {
     this.setState({ isCongrats: true})
   }
 
+  setResult = (result) => {
+    this.setState({ result: result}, this.checkAnswer)
+  }
 calculate = (e) => {
-  // const { operation } = this.props;
   this.setState({ isCongrats: true });
   let mathOperation = this.state.newInformation.operation; 
   let Num1 = parseInt(this.state.newInformation.firstNumber);
   let Num2 = parseInt(this.state.newInformation.secondNumber);
+  let result = '';
   if(mathOperation === '+') {
-  this.setState({ result: Num1  + Num2 });
+  result= Num1  + Num2;
   }
   else if(mathOperation === '-') {
-    this.setState({ result: Num1 - Num2 });
-   
+    result= Num1 - Num2 ;
+
   }
   else if(mathOperation === 'x') {
-    this.setState({ result: Num1 * Num2 });
+    result = Num1 * Num2 ;
+
   }
   else if(mathOperation === '/') {
-    this.setState({ result: Num1 / Num2 });
+    result= Num1 / Num2;
   }
-  this.checkAnswer();
+   this.setResult(result);
+  console.log(result);
+  return result;
 }
-
-
-
 
   render() {
     const { kid, isCorrect, isCongrats } = this.state;
-    const { kidScore } = this.props;
     const { newInformation} = this.state;
-    // console.log(this.state.newInformation.operation);
-    // console.log(kidScore);
-   
-
-    // let Answer = parseInt(this.state.newInformation.answer);
-    // let firstNumber = this.state.newInformation.firstNumber;
-    // let secondNumber = this.state.newInformation.secondNumber;
-    // let subtractionAnswer = parseInt(this.state.newInformation.subtractionAnswer);
-    // let Result = this.state.result;
 
 
     const makeCongrats = () => {
@@ -138,7 +130,6 @@ calculate = (e) => {
       return(
         <div><h2>Please Try Again!!</h2></div>
       )
-      // kidScore();
       }
 
     }
@@ -149,7 +140,7 @@ calculate = (e) => {
       <h2>ስሌት/Calculation</h2>
       <div>
         <label>Enter first number</label>
-          <input type="number" className="num1 input-numbers" placeholder="1" value={newInformation.firstNumber} onChange={this.firstNumberChange}/>
+          <input type="number" className="num1 input-numbers"  placeholder="1" value={newInformation.firstNumber} onChange={this.firstNumberChange}/>
       </div>
       <div>
         <label>Enter Operation</label>
@@ -173,20 +164,6 @@ calculate = (e) => {
     </div>
       );
     }
-
-    
-    // if(Result == Answer) {
-    //   return (
-    //     <div>
-    //       <div>{cards()}
-    //         {/* {this.scoreCard} */}
-    //       </div>
-    //       <h2>Good Job!!</h2>
-          
-    //     </div>
-    //   );
-    // }
-
       return ( 
         <div>{cards()}</div>
       );

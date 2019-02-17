@@ -1,9 +1,17 @@
 .kids-listing{
   list-style-type: none;
-  
+  // background-color: rgb(237, 240, 39);
+  // border: 2px solid red;
+  // border-radius: 10px;
+  // width: 400px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .kids-info {
   font-family: 'Press Start 2P', cursive;
+  color: rgb(0, 68, 255);
 }
 a > .kid-link {
   text-decoration: none;
@@ -13,4 +21,5 @@ a > .kid-link {
 }
 .card {
   border-color: red;
+  background-color: rgb(255, 119, 0);
 }

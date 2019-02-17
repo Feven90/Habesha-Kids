@@ -19,14 +19,16 @@ class KidItem extends React.Component {
   render() {
     const { kid, kidScore } = this.props;
     return (
-      <div className="card">
-        <li className="kids-item kids-listing">
+      <div className="">
+        <div className="kids-item kids-listing">
+        <div className="col">
           <Link to={{ pathname:`/math/${kid.id}`,
                   state: { kid},
                 kidScore:{kidScore}}}
                   className="kid-link">
                   <span className="col-2 kids-info" >{kid.name}</span>
           </Link>
+          </div>
           <div>
           <span className="col">
               <button className="btn btn-danger" onClick={this.editKidEvent}> <i className="fas fa-pencil-alt"></i></button>
@@ -35,7 +37,7 @@ class KidItem extends React.Component {
               <button className="btn btn-danger" onClick={this.deleteKidEvent}> <i className="fas fa-trash-alt"></i></button>
             </span>
             </div>       
-            </li>
+            </div>
       </div>
     );
   }

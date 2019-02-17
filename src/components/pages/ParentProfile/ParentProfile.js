@@ -79,7 +79,7 @@ passKidToEdit = kidId => this.setState({ isEditing: true, editId: kidId });
     return (
       <div>
         <div className="profile-welcome">
-            <span className="profile-welcome"><h2>Welcome {profile.name}</h2></span>
+            <span className="profile-welcome"><h2>እንኳን ደህና መጡ</h2><h3>Welcome {profile.name}</h3></span>
         </div>
           <div className="kid-form-and-info">
             <div className="kids-home">

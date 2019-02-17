@@ -1,5 +1,4 @@
 import React from 'react';
-// import firebase from 'firebase/app';
 import 'firebase/auth';
 import './Colors.scss';
 import ColorItem from '../ColorItem/ColorItem';
@@ -26,7 +25,6 @@ colorRequest.getColors().then((colors) => {
     ));
     return (
       <div> 
-        {/* <div className="colors"> */}
         <div className="card-group">
           <h2>
           {colorItemComponents}
