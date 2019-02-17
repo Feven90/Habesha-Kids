@@ -1,15 +1,9 @@
 import React from 'react';
 import './KidItem.scss';
 import { Link } from 'react-router-dom';
-import MathExercises from '../MathExercises/MathExercises';
 
-// import tutorialShape from '../../helpers/propz/tutorialShape';
-// import authRequests from '../../../helpers/data/autheRequests';
 
 class KidItem extends React.Component {
-  // static propTypes = {
-  //   tutorial: tutorialShape,
-  // }
 
   deleteKidEvent = (e) => {
     e.preventDefault();
@@ -21,17 +15,15 @@ class KidItem extends React.Component {
     const { passKidToEdit, kid } = this.props;
     passKidToEdit(kid.id);
   }
-  // }
   
   render() {
     const { kid, kidScore } = this.props;
-    console.log(kid.id);
     return (
       <div className="card">
         <li className="kids-item kids-listing">
           <Link to={{ pathname:`/math/${kid.id}`,
                   state: { kid},
-                params:{kidScore}}}
+                kidScore:{kidScore}}}
                   className="kid-link">
                   <span className="col-2 kids-info" >{kid.name}</span>
           </Link>
