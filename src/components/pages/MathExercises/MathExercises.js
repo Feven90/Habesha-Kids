@@ -1,6 +1,7 @@
 import React from 'react';
 import './MathExercises.scss';
 import kidRequest from '../../../helpers/data/kidRequest';
+
 const mathInformation = {
   operation:'',
   firstNumber:'',
@@ -124,11 +125,12 @@ calculate = (e) => {
       if(isCongrats) {
       if(isCorrect) {
         return( 
-          <div><h2>Good Job!!</h2></div>
+          <div><h2 className="good-job">Good Job!!</h2></div>
         )
       }
       return(
-        <div><h2>Please Try Again!!</h2></div>
+        <div><h2 className="try-again">Sorry, Incorrect</h2>
+        <h3 className="good-job">The correct answer is: {this.state.result}</h3></div>
       )
       }
 

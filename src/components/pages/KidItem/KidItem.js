@@ -22,7 +22,7 @@ class KidItem extends React.Component {
       <div className="">
         <div className="kids-item kids-listing">
         <div className="col">
-          <Link to={{ pathname:`/math/${kid.id}`,
+          <Link to={{ pathname:`/math/${kid.id}/${kid.name}`,
                   state: { kid},
                 kidScore:{kidScore}}}
                   className="kid-link">
