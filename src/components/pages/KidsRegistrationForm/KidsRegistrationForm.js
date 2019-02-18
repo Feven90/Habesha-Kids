@@ -32,8 +32,8 @@ state = {
   formSubmit = (e) => {
     e.preventDefault();
     const { SaveChildForm  } = this.props;
-    const kidInformation = { ...this.state.newKidInformation };
-    SaveChildForm (this.state.newKidInformation);
+    const myKidInformation = { ...this.state.newKidInformation };
+    SaveChildForm (myKidInformation);
     this.setState({ newKidInformation:kidInformation })
   }
 
