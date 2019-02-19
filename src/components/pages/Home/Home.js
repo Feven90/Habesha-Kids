@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.scss';
 import alphabet from '../../../images/alphabet.jpg';
-import words from '../../../images/words.jpg';
+import profile from '../../../images/tom&jerry.jpg';
 import numbers from '../../../images/numbers.jpg';
 import colors from '../../../images/colors.jpeg';
 
@@ -28,8 +28,8 @@ class Home extends React.Component {
         <div className="home-navigation" id='colors' onClick={this.changeView}>
             <h6 className=""><img src={colors} alt="colors" /><p>ቀለማት/Colors</p></h6>
         </div>
-        <div className="home-navigation" id='words' onClick={this.changeView}>
-            <h6 className=""><img src={words} alt="words" /><p>ቃላት/Words</p></h6>
+        <div className="home-navigation" id='profile' onClick={this.changeView}>
+            <h6 className=""><img src={profile} alt="words" /><p>ገፅ/Profile</p></h6>
       </div>
       </div>
     );
