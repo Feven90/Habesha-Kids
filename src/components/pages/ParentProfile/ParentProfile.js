@@ -20,7 +20,6 @@ class ParentProfile extends React.Component {
     this.setState({profile})
   });
   kidRequest.getKids(uid).then((kids) => {
-    console.log(kids);
     this.setState({ kids });
   });
 }
@@ -36,14 +35,6 @@ deleteOneKid = (kidId) => {
     })
     .catch(err => console.error('error with delte single', err));
 }
-score = () => {
-  // const { kid }  = this.props.location.state;
-  // const kidScore = this.state.kid.score;
-  // kidRequest.updateScore(kidId).then((score) => {
-  //   this.setState({ kidId: kidScore + 10});
-    console.log("kid's score");
-  // })
-  }
 
   kidFormSubmitEvent = (newKidInformation) => {
     const{ isEditing, editId } = this.state;
@@ -64,7 +55,6 @@ score = () => {
     newKidInformation.score = 0;
     kidRequest.postKidRequest(newKidInformation).then(() => {
       kidRequest.getKids(uid).then((kids) => {
-        console.log(kids);
         this.setState({ kids });
       });
     })
@@ -87,7 +77,6 @@ passKidToEdit = kidId => this.setState({ isEditing: true, editId: kidId });
               kids={this.state.kids}
               deleteSingleKid ={this.deleteOneKid}
               passKidToEdit={this.passKidToEdit}
-              kidScore={this.score}
               />
             </div>
             <div className="kid-registration-form">

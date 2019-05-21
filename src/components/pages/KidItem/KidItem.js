@@ -17,14 +17,15 @@ class KidItem extends React.Component {
   }
   
   render() {
-    const { kid, kidScore } = this.props;
+    const { kid } = this.props;
     return (
       <div className="">
         <div className="kids-item kids-listing">
         <div className="col">
           <Link to={{ pathname:`/math/${kid.id}/${kid.name}`,
-                  state: { kid},
-                kidScore:{kidScore}}}
+                   state: { kid},
+                //kidScore:{kidScore}
+              }}
                   className="kid-link">
                   <span className="col-2 kids-info" >{kid.name}</span>
           </Link>
