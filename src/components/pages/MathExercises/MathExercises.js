@@ -7,8 +7,6 @@ const mathInformation = {
   firstNumber:'',
   secondNumber:'',
   answer:'',
-  score: 0,
-
 }
 class MathExercises extends React.Component {
 
@@ -24,7 +22,6 @@ class MathExercises extends React.Component {
 componentDidMount() {
   const kidId = this.props.location.state.kid.id;
   kidRequest.getSingleKid(kidId).then((kid) => {
-  console.log(kid.data);
   this.setState({ kid: kid.data });
 });
 }
@@ -38,7 +35,6 @@ formFieldStringState = (name, e) => {
 }
 firstNumberChange = (e) => {
   this.formFieldStringState('firstNumber', e);
-
 }
 
 secondNumberChange = (e) => {
@@ -52,36 +48,30 @@ operationChange = (e) => {
   this.formFieldStringState('operation', e);
 }
 getOperation = (e) => {
-  console.log(e.target.value);
+  //console.log(e.target.value);
  this.setState({ operation: e.target.value});
 }
 
 checkAnswer = () => {
   let Result = this.state.result;
   let Answer = parseInt(this.state.newInformation.answer);
-  console.log(Result);
   if(Result === Answer) {
-    console.log('CORRECT')
     this.setState({ isCorrect: true })
     this.updateScore();
   }
   else{
     this.setState({ isCorrect: false })
-    console.log('NOOOOOO')
   }
   }
 
   updateScore = () => {
     const { kid } = this.state;
     const kidId = this.props.location.state.kid.id;
-    console.log(kidId);
     const newScore = kid.score + 10;
-    console.log(newScore);
     kid.id = kidId;
    kid.score = newScore;
     kidRequest.putRequest(kidId, kid).then(() => {
       kidRequest.getSingleKid(kidId).then((kid) => {
-        console.log(kid.data);
         this.setState({ kid: kid.data });
       });
     })
@@ -112,7 +102,6 @@ calculate = (e) => {
     result= Num1 / Num2;
   }
    this.setResult(result);
-  console.log(result);
   return result;
 }
 
@@ -159,7 +148,6 @@ calculate = (e) => {
       <div>
       <button type="submit" value="Submit" className="btn submit btn-danger" onClick={this.calculate}>Submit</button>
  </div>
- {/* {this.score()} */}
  <h2> Score: {kid.score}</h2>
  {makeCongrats()}
  </div>
